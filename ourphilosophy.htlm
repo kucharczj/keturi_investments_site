@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Our Philosophy — KETURI Investment Management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google Fonts (same families as Squarespace) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- OPTIONAL: Link to your own stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Meta tags referencing the same content from your original code -->
+  <meta name="description" content="">
+  <meta property="og:site_name" content="KETURI Investment Management"/>
+  <meta property="og:title" content="Our Philosophy — KETURI Investment Management"/>
+  <meta property="og:url" content="https://www.keturiinvestments.com/ourphilosophy"/>
+  <meta property="og:type" content="website"/>
+  <meta itemprop="name" content="Our Philosophy — KETURI Investment Management"/>
+  <meta itemprop="url" content="https://www.keturiinvestments.com/ourphilosophy"/>
+  <meta name="twitter:title" content="Our Philosophy — KETURI Investment Management"/>
+  <meta name="twitter:url" content="https://www.keturiinvestments.com/ourphilosophy"/>
+  <meta name="twitter:card" content="summary"/>
+</head>
+
+<body>
+  <!-- HEADER (Static version) -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <!-- Logo / Site Title -->
+      <div class="header-title">
+        <a href="index.html">KETURI Investment Management</a>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="header-nav">
+        <ul>
+          <li class="nav-folder">
+            <a href="about.html" class="folder-title">About</a>
+            <ul class="folder-dropdown">
+              <li><a href="ourname.html">Our Name</a></li>
+              <li><a href="whatwedo.html">What We Do</a></li>
+            </ul>
+          </li>
+          <!-- Mark "Our Philosophy" as the active page (manually) -->
+          <li class="nav-item active">
+            <a href="ourphilosophy.html" aria-current="page">Our Philosophy</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Contact Us CTA -->
+      <div class="header-cta">
+        <a href="contactus.html" class="cta-button">Contact Us</a>
+      </div>
+
+      <!-- If you want a burger menu icon, you can keep these lines,
+           but remember you'll need custom JS to make it functional. -->
+      <button class="header-burger-btn" aria-label="Open Menu">
+        <!-- "Hamburger" lines -->
+        <div class="burger-box">
+          <div class="top-bun"></div>
+          <div class="patty"></div>
+          <div class="bottom-bun"></div>
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="page" class="container" role="main">
+
+    <!-- Section #1 (Hero with background image + text "A disciplined & elegant approach") -->
+    <section class="hero-section black-section" style="
+      background: url('https://images.squarespace-cdn.com/content/v1/5fb448c34758a50ced5b8b70/1651028867168-Q912T2LLY3ORSC2ZIT47/20191205_150524.jpg') 
+                  no-repeat center center / cover;
+      position: relative;">
+      <!-- Overlay (semi-transparent black) -->
+      <div class="section-background-overlay" style="background-color: rgba(0,0,0,0.4); position: absolute; inset: 0;"></div>
+
+      <div class="hero-content" style="position: relative; z-index: 1; text-align: center; padding: 4rem 1rem;">
+        <h1>A disciplined &amp; elegant approach</h1>
+      </div>
+    </section>
+
+    <!-- Section #2: Our Philosophy text content -->
+    <section class="content-section" style="max-width: 1200px; margin: 2rem auto; padding: 1rem;">
+      <h3>Our Philosophy</h3>
+      <p>
+        We take the opposite approach to the current momentum investment expectations gripping the public in today’s market. 
+        KETURI’s disciplined, elegant calculations and decisions guide our fundamental investment process. We focus on the 
+        ability of the underlying investment to consistently have what we refer to as <strong>Value Differential</strong>.
+      </p>
+      <p>
+        Consistent high levels of business performance, managed and monitored for a long period of time, gets us to an 
+        inflection point where compounding accelerates. At this crucial point, creation of wealth is magnified. Without 
+        consistent Value Differential, we believe it is nearly impossible to truly benefit from compounding, especially in 
+        taxable accounts. Time and consistent value creation are both necessary for the concept of compounding to work its 
+        magic, and at KETURI, we strive for exactly that.
+      </p>
+      <p class="sqsrte-large">
+        We focus on the future, for those who fail to look forward get left behind.
+      </p>
+      <p>
+        Within our investment universe of companies, we expect upward top-line revenue trends, operational leverage, significant 
+        pre-tax margins, and aware and capable management. Additionally, operational cash must be at a level to influence future 
+        growth, balance sheet strength, share buybacks and/or mergers and acquisitions; and if appropriate, increasing dividends. 
+        We pay close attention to cash flow – how cash is currently allocated and how it will be likely allocated over the next 10 years.
+      </p>
+      <p>
+        Balance sheets indicate a degree of financial safety, while debt capacity can be a source of capital for growth. This data 
+        points to a business’s ability to generate consistent returns in excess of cost of capital, in turn, ensuring the creation 
+        of shareholder value. When this differential is absent, value is destroyed.
+      </p>
+      <p>
+        KETURI’s fundamental investment philosophy encompasses a valuation reference point for each security assuring we pay a fair 
+        price or lower. In our analysis, our baseline expectation is a return of 7.5% per annum after tax, effectively doubling 
+        assets every 10 years. Returns fluctuate and we cannot assure the timing or the eventuality of minimum returns, but our 
+        work is supportive. Ideally, the returns in the long run will parallel business value creation. For nearly all our 
+        considered companies’, the business performance expectations and earnings per share growth are notably higher than 7.5% 
+        per annum.
+      </p>
+    </section>
+
+    <!-- Another content section: "A new way to measure success" -->
+    <section class="content-section" style="max-width: 1200px; margin: 2rem auto; padding: 1rem;">
+      <h3>A new way to measure success</h3>
+      <p>We measure our progress on two levels:</p>
+      <ol>
+        <li>
+          <p>
+            Are the companies in which we are invested trending the growth and generating cash and profit as we expect?
+          </p>
+        </li>
+        <li>
+          <p>
+            Is the value creation in our client portfolios tracking toward their objectives?
+          </p>
+        </li>
+      </ol>
+      <p>
+        We purposefully do not make investment decisions simply to track indexes. We feel these indexes are constructs requiring 
+        positions that may not necessarily meet our quality, risk, and long-term performance standards. The performance of indexes 
+        is often decided by how large market weighted positions perform, regardless of investment opportunities. Index managers and 
+        those active managers who track indexes must be invested in these big positions to see any success. Many times, those 
+        tracking indexes, including many mutual funds and ETFs, make decisions to meet or beat the indexes with minimum regard of the 
+        tax impact.
+      </p>
+      <p>
+        Our approach favors separate accounts managed specifically to meet or exceed each client’s objectives, not track an index.
+      </p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-dark" style="background: #222; color: #fff; padding: 2rem; text-align: center;">
+    <p>17620 Pilkington Road, Lake Oswego, OR 97035 | (503) 970-6830 | keturi@keturiinvestments.com</p>
+  </footer>
+
+  <!-- No squarespace scripts (they won't work on a static site).
+       If you want some interactivity, add your own .js references here. -->
+</body>
+</html>
