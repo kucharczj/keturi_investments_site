@@ -1,57 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>About - KETURI Investment Management</title>
-  <meta name="description" content="About KETURI Investment Management" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&family=Roboto:wght@300;500;700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
+<nav class="header-nav">
+  <ul>
+    <!-- 'About' is no longer a link, but rather a hover trigger -->
+    <li class="nav-folder">
+      <!-- Instead of an <a href="/about-1">, use a 'dummy' link or span -->
+      <a href="#" class="folder-title" onclick="return false;">About</a>
+      <!-- Or could be just a <span>About</span> if you prefer no link at all -->
 
-  <!-- Same Header as index.html -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="header-title">
-        <a href="index.html">KETURI Investment Management</a>
-      </div>
-      <nav class="header-nav">
-        <ul>
-          <li class="nav-folder">
-            <a href="about.html" class="folder-title">About</a>
-            <ul class="folder-dropdown">
-              <li><a href="ourname.html">Our Name</a></li>
-              <li><a href="whatwedo.html">What We Do</a></li>
-            </ul>
-          </li>
-          <li><a href="ourphilosophy.html">Our Philosophy</a></li>
-        </ul>
-      </nav>
-      <div class="header-cta">
-        <a href="contactus.html" class="cta-button">Contact Us</a>
-      </div>
-    </div>
-  </header>
+      <!-- Dropdown list -->
+      <ul class="folder-dropdown">
+        <li><a href="ourname.html">Our Name</a></li>
+        <li><a href="whatwedo.html">What We Do</a></li>
+      </ul>
+    </li>
 
-  <section class="section-medium">
-    <div class="section-inner">
-      <h1>About KETURI Investment Management</h1>
-      <p>This is a placeholder “About” page. In Squarespace, “About” was a folder with sub-pages (“Our Name,” “What We Do”).</p>
-      <p>You can expand this content or redirect visitors to those sub-pages.</p>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p>17620 Pilkington Road, Lake Oswego, OR 97035 | (503) 970-6830 | keturi@keturiinvestments.com</p>
-      <p>&copy; <span id="year"></span> KETURI Investment Management</p>
-    </div>
-  </footer>
-
-  <script src="js/script.js" defer></script>
-</body>
-</html>
+    <!-- Our Philosophy remains normal -->
+    <li><a href="ourphilosophy.html">Our Philosophy</a></li>
+  </ul>
+</nav>
