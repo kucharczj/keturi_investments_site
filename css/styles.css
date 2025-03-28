@@ -1,40 +1,39 @@
-/* 1) Generic Reset & Fonts */
-
+/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body / Fonts */
 body {
   font-family: 'Work Sans', 'Roboto', sans-serif;
-  background-color: #fff;
   color: #333;
-  line-height: 1.5;
+  background: #fff;
+  line-height: 1.6;
 }
 
-/* 2) Header Styles */
-
+/* Header */
 .site-header {
+  background: #fff; /* or transparent if you prefer the “overlay” look */
   width: 100%;
-  background: #fff;
   border-bottom: 1px solid #eee;
-  padding: 0.75rem 1.5rem;
 }
 
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .header-title a {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #000;
   text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .header-nav ul {
@@ -43,27 +42,30 @@ body {
   gap: 1rem;
 }
 
-/* 'About' folder drop-down */
+.header-nav a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+}
+
+.header-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Dropdown Folder (About) */
 .nav-folder {
   position: relative;
 }
 
-.folder-title {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-.folder-dropdown {
+.nav-folder .folder-dropdown {
   display: none;
   position: absolute;
   top: 2rem;
   left: 0;
   background: #fff;
   border: 1px solid #eee;
-  list-style: none;
-  min-width: 150px;
   padding: 0.5rem;
+  list-style: none;
 }
 
 .nav-folder:hover .folder-dropdown {
@@ -73,35 +75,36 @@ body {
 .folder-dropdown li {
   margin: 0.5rem 0;
 }
+
 .folder-dropdown a {
-  color: #333;
-  text-decoration: none;
   display: block;
-  padding: 0.25rem 0.5rem;
+  white-space: nowrap;
 }
 
 /* CTA Button in Header */
 .header-cta .cta-button {
   background: #000;
   color: #fff;
-  padding: 0.5rem 1.25rem;
+  padding: 0.5rem 1rem;
   text-decoration: none;
-  border-radius: 4px;
-  font-weight: 600;
+  border-radius: 3px;
 }
 
-/* 3) Hero Section */
-
-.hero-section {
+/* Hero */
+.hero {
   position: relative;
-  min-height: 70vh;
-  background-size: cover;
-  background-position: center center;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  min-height: 70vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-large {
+  min-height: 80vh;
 }
 
 .hero-overlay {
@@ -110,48 +113,34 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #000;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: 2rem;
   max-width: 600px;
-}
-
-.hero-dark {
-  background-color: #111;
+  padding: 2rem;
 }
 
 .hero-content h1 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.hero-button {
+.hero-btn {
   display: inline-block;
-  background: #fff;
-  color: #111;
+  margin-top: 1rem;
+  background-color: #ffffff;
+  color: #333;
   padding: 0.75rem 1.25rem;
   text-decoration: none;
   border-radius: 4px;
   font-weight: 600;
 }
 
-/* 4) Mid / Shared Sections */
-
-.light-bg {
-  background: #fff;
-  color: #333;
-}
-
-.dark-bg {
-  background: #111;
-  color: #fff;
-}
-
-.medium-section {
+/* Sections */
+.section-medium {
   padding: 3rem 1rem;
 }
 
@@ -160,57 +149,77 @@ body {
   margin: 0 auto;
 }
 
-/* Centered text utility */
-.centered-text {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-/* Info Grid: label + text side by side */
-.info-grid {
+/* Layout Helpers */
+.two-columns {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  padding: 1rem 0;
 }
 
-.info-grid > div {
-  flex: 1 1 250px;
+.two-columns .column {
+  flex: 1 1 300px;
 }
 
-/* 5) Footer */
-
-.footer-dark {
-  background: #222;
-  color: #fff;
-  padding: 2rem 1rem;
+/* Footer */
+.site-footer {
+  background: #f8f8f8;
+  padding: 1rem;
   text-align: center;
 }
 
 .footer-inner {
   max-width: 1200px;
   margin: 0 auto;
+  color: #333;
 }
 
-/* 6) Responsive Adjustments (Optional) */
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin-top: 2rem;
+}
 
+.contact-form label {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.contact-form button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .header-inner {
     flex-wrap: wrap;
-    justify-content: space-between;
   }
-
-  .info-grid {
+  .two-columns {
     flex-direction: column;
   }
-  
   .folder-dropdown {
     position: static;
-    border: none;
-    display: none; /* If you want a simpler mobile approach, or else handle a hamburger menu. */
   }
-
   .nav-folder:hover .folder-dropdown {
     display: none;
   }
-}
+  .nav-folder .folder-dropdown {
+    display: block;
+    border: none;
+  }
+
