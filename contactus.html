@@ -2,47 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact Us - KETURI Investment Management</title>
-  <meta name="description" content="Contact KETURI Investment Management" />
+  <title>KETURI Investment Management - Contact Us</title>
+  <meta name="description" content="KETURI Investment Management - Contact Page" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts (same as index) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&family=Roboto:wght@300;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,700&display=swap"
     rel="stylesheet"
   />
+
+  <!-- Our external stylesheet -->
   <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Optional: Include your JS script if needed -->
+  <script src="js/script.js" defer></script>
 </head>
 <body>
 
-  <!-- Header (same as above) -->
+  <!-- ========== HEADER / NAV (copied from index.html) ========== -->
   <header class="site-header">
-    <!-- ... -->
-  </header>
+    <div class="header-inner">
+      <!-- Logo / Site Title -->
+      <div class="header-title">
+        <a href="index.html">KETURI Investment Management</a>
+      </div>
 
-  <section class="section-medium">
-    <div class="section-inner">
-      <h1>Contact Us</h1>
-      <p>We look forward to hearing from you. Please fill out our form below or reach us at (503) 970-6830.</p>
+      <!-- Navigation -->
+      <nav class="header-nav">
+        <ul>
+          <!-- Folder "About" (has sub-links) -->
+          <li class="nav-folder">
+            <a href="#" class="folder-title">About</a>
+            <ul class="folder-dropdown">
+              <li><a href="ourname.html">Our Name</a></li>
+              <li><a href="whatwedo.html">What We Do</a></li>
+            </ul>
+          </li>
+          <li><a href="ourphilosophy.html">Our Philosophy</a></li>
+        </ul>
+      </nav>
 
-      <form class="contact-form" action="#" method="POST">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Submit</button>
-      </form>
+      <!-- Call To Action (Contact Us) -->
+      <div class="header-cta">
+        <a href="contactus.html" class="cta-button">Contact Us</a>
+      </div>
     </div>
-  </section>
+  </header>
+  <!-- ========== END HEADER ========== -->
 
-  <!-- Footer (same as above) -->
+
+  <!-- ========== MAIN CONTENT (Contact Form) ========== -->
+  <main class="contact-page">
+    <section class="section-medium">
+      <div class="section-inner">
+        <h1>Contact Us</h1>
+        <p>
+          We look forward to hearing from you. Please fill out our form below or reach us at (503) 970-6830.
+        </p>
+
+        <!-- Simple Contact Form -->
+        <form action="#" method="POST" class="contact-form">
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" name="fullName" required>
+
+          <label for="emailAddress">Email Address:</label>
+          <input type="email" id="emailAddress" name="emailAddress" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+
+  <!-- ========== FOOTER (copied from index.html) ========== -->
   <footer class="site-footer">
-    <!-- ... -->
+    <div class="footer-inner">
+      <p>17620 Pilkington Road, Lake Oswego, OR 97035 | (503) 970-6830 | keturi@keturiinvestments.com</p>
+      <p>&copy; <span id="year"></span> KETURI Investment Management</p>
+    </div>
   </footer>
+  <!-- ========== END FOOTER ========== -->
 
-  <script src="js/script.js" defer></script>
 </body>
 </html>
