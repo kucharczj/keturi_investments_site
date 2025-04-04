@@ -7,15 +7,15 @@
 
 /* Body / Fonts */
 body {
-  font-family: 'Work Sans', 'Roboto', sans-serif;
-  color: #333;
-  background: #fff;
+  font-family: 'Work Sans', 'Roboto', sans-serif; /* Update with the target site's fonts */
+  color: #333; /* Update with the target site's text color */
+  background: #fff; /* Update with the target site's background color */
   line-height: 1.6;
 }
 
 /* Header */
 .site-header {
-  background: transparent; /* or #fff if you want a solid color */
+  background: transparent !important; /* or #fff if you want a solid color */
   width: 100%;
   position: relative;
 }
