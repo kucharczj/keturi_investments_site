@@ -254,4 +254,23 @@ body {
   line-height: 1.6;   /* comfortable spacing */
 }
 
+/* Footer */
+.site-footer {
+  background: #4A6275; /* pick a darker bluish shade */
+  color: #fff;         /* white text */
+  text-align: center;  /* center the text */
+  padding: 1.5rem 1rem;
+}
+
+/* If you use a .footer-inner container, ensure it’s centered as well */
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tweak the paragraphs if you want specific spacing or style */
+.site-footer p {
+  margin: 0.5rem 0;
+  font-size: 1rem;     /* or any size you like */
+}
 
