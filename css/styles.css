@@ -40,7 +40,7 @@ body {
 .header-title a {
   font-family: 'Work Sans', 'Roboto', sans-serif;
   font-weight: 300;      /* Lighter weight for a tall, airy look */
-  letter-spacing: 0.15em;/* Increase spacing to mimic the screenshot */
+  letter-spacing: 0.08em;/* Increase spacing to mimic the screenshot */
   text-transform: uppercase; 
   font-size: 1.2rem;     /* Adjust to taste */
   color: #fff;           /* If you want it white over the hero image */
