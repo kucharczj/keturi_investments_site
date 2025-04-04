@@ -6,124 +6,119 @@
   <meta name="description" content="KETURI Investment Management - Homepage" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Fonts (from your Squarespace site) -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700
+          &family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,700
+          &display=swap"
     rel="stylesheet"
   />
 
   <!-- Our external stylesheet -->
   <link rel="stylesheet" href="css/styles.css" />
 
-  <!-- Optional: Include a small JS script if needed -->
+  <!-- Optional JS script -->
   <script src="js/script.js" defer></script>
 </head>
 <body>
 
 <header class="site-header">
   <div class="header-inner">
+
     <!-- Logo / Site Title -->
     <div class="header-title">
       <a href="index.html">KETURI Investment Management</a>
     </div>
 
-    <!-- Hamburger Button (Hidden by default on desktop) -->
+    <!-- Desktop Nav (visible only at large screens) -->
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Our Philosophy</a></li>
+      </ul>
+    </nav>
+
+    <!-- CTA Button -->
+    <div class="header-cta">
+      <a href="contactus.html" class="cta-button">Contact Us</a>
+    </div>
+
+    <!-- Hamburger Button (for mobile only) -->
     <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
-      <!-- A common approach is three spans or divs: -->
       <span class="line top-bun"></span>
       <span class="line patty"></span>
       <span class="line bottom-bun"></span>
     </button>
 
-    <!-- Navigation (Desktop & Mobile) -->
-    <nav id="mainNav" class="nav-closed">
-      <ul class ="main-links">
-        <li>
-          <a href="#" id="aboutLink">About</a> <!-- Clicking "About" reveals sub-menu -->
-          <div id="aboutOverlay" class="overlay-hidden">
-            <button id="backBtn">← Back</button>
-            <ul>
-              <li><a href="#">Our Name</a></li>
-              <li><a href="#">What We Do</a></li>
-            </ul>
-          </div>
-        </li>
+    <!-- Mobile Overlay Nav (initially hidden) -->
+    <nav id="mobileNav" class="mobile-nav nav-closed">
+      <ul>
+        <li><a href="#">About</a></li>
         <li><a href="#">Our Philosophy</a></li>
       </ul>
     </nav>
 
-    <!-- CTA Button in Header -->
-    <div class="header-cta">
-      <a href="contactus.html" class="cta-button">Contact Us</a>
-    </div>
-  </div>
+  </div> <!-- end .header-inner -->
 </header>
 
+<!-- Hero Section -->
+<section class="hero hero-large" style="background-image: url('path/to/your/stone.jpg');">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Investments for generations</h1>
+    <a href="whatwedo.html" class="hero-btn">Learn More</a>
+  </div>
+</section>
 
-  <!-- Hero Section -->
-  <section class="hero hero-large" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5fb448c34758a50ced5b8b70/1651029297903-LAESIP4UU6OK0ABOYLHB/stone.jpg');">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Investments for generations</h1>
-      <a href="whatwedo.html" class="hero-btn">Learn More</a>
-    </div>
-  </section>
+<!-- Mid-Section -->
+<section class="section-medium">
+  <div class="section-inner">
+    <h2>We manage financial assets on behalf of you and your family for the long term.</h2>
+    <hr />
+  </div>
+</section>
 
-  <!-- Mid-Section -->
-  <section class="section-medium">
-    <div class="section-inner">
-      <h2>We manage financial assets on behalf of you and your family for the long term.</h2>
-      <hr />
+<!-- More Info Section -->
+<section class="section-medium">
+  <div class="section-inner two-columns">
+    <div class="column">
+      <h3>Our philosophy</h3>
     </div>
-  </section>
+    <div class="column">
+      <p>Learn about our unique approach and our new take on measuring success.</p>
+      <p><a href="ourphilosophy.html">Learn More</a></p>
+    </div>
+  </div>
 
-  <!-- More Info Section -->
-  <section class="section-medium">
-    <div class="section-inner two-columns">
-      <div class="column">
-        <h3>Our philosophy</h3>
-      </div>
-      <div class="column">
-        <p>Learn about our unique approach and our new take on measuring success.</p>
-        <p><a href="ourphilosophy.html">Learn More</a></p>
-      </div>
+  <div class="section-inner two-columns">
+    <div class="column">
+      <h3>Why KETURI?</h3>
     </div>
+    <div class="column">
+      <p>Read about the origin of our name, and how we infuse its meaning into our approach...</p>
+      <p><a href="ourname.html">Learn More</a></p>
+    </div>
+  </div>
 
-    <div class="section-inner two-columns">
-      <div class="column">
-        <h3>Why KETURI?</h3>
-      </div>
-      <div class="column">
-        <p>
-          Read about the origin of our name, and how we infuse its meaning into our approach.  
-          We invest alongside our clients and apply our principles to each decision like it’s one of our own.
-        </p>
-        <p><a href="ourname.html">Learn More</a></p>
-      </div>
+  <div class="section-inner two-columns">
+    <div class="column">
+      <h3>Connect with us</h3>
     </div>
+    <div class="column">
+      <p>Let’s start the conversation about how KETURI can handle your objectives...</p>
+      <p><a href="contactus.html">Contact Us</a></p>
+    </div>
+  </div>
+</section>
 
-    <div class="section-inner two-columns">
-      <div class="column">
-        <h3>Connect with us</h3>
-      </div>
-      <div class="column">
-        <p>
-          Let’s start the conversation about how KETURI can handle your objectives.  
-          Start something today that can endure for lifetimes.
-        </p>
-        <p><a href="contactus.html">Contact Us</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p>17620 Pilkington Road, Lake Oswego, OR 97035 | (503) 970-6830 | keturi@keturiinvestments.com</p>
-      <p>&copy; <span id="year"></span> KETURI Investment Management</p>
-    </div>
-  </footer>
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>17620 Pilkington Road, Lake Oswego, OR 97035 | (503) 970-6830 | keturi@keturiinvestments.com</p>
+    <p>&copy; <span id="year"></span> KETURI Investment Management</p>
+  </div>
+</footer>
 
 </body>
 </html>
