@@ -210,13 +210,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
-
-/* 
-   If you want the big text 
-   (“We manage financial assets...”) 
-   to have a lighter or bigger style, 
-   you could do something like:
-
+/* for the we manage assets on behald.. */
    .section-inner h2 {
      font-size: 2rem;
      font-weight: 300;
@@ -224,11 +218,8 @@ body {
      text-align: center;
      margin-bottom: 2rem;
    }
-*/
 
-/* 
-   For multi-column layout
-*/
+/* For multi-column layout */
 .two-columns {
   display: flex;
   flex-wrap: wrap;
@@ -239,12 +230,28 @@ body {
   flex: 1 1 300px;
 }
 
-/* 
-   If you want a slight color for sub-headings or paragraphs,
-   you can tweak them similarly:
+/* If you want a slight color for sub-headings or paragraphs,
+   you can tweak them similarly */
 
-   .two-columns h3 {
-     color: #6b8fa7;
-     font-weight: 300;
+ .two-columns h3 {
+    color: #6b8fa7;
+    font-weight: 300;
    }
-*/
+
+/* Example: style for your sub-headings in the mid-sections */
+.section-inner h3 {
+  color: #6b8fa7;     /* a muted bluish color */
+  font-weight: 300;   /* keep it light */
+  font-size: 1.8rem;  /* bigger than default */
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+/* If you also want to style the paragraphs under them: */
+.section-inner p {
+  color: #555;        /* a dark gray text */
+  font-size: 1rem;
+  line-height: 1.6;   /* comfortable spacing */
+}
+
+
