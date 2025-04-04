@@ -263,3 +263,54 @@ body {
   }
 }
 
+/* Basic styling for the hamburger icon (initially hidden). */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;  /* or your desired color */
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Show the hamburger, hide the normal nav when viewport <= 768px */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Show hamburger on mobile */
+  }
+  .header-nav {
+    display: none; /* Hide normal nav on mobile by default */
+  }
+
+  /* If we add an “open” class in JS, we can override display to show. */
+  .header-nav.open {
+    display: block;
+    position: absolute;
+    top: 70px; /* or wherever you want it to appear */
+    right: 0;
+    width: 200px; /* or 100% if you want a full overlay */
+    background: #fff; /* If you want a panel background, else transparent */
+    /* Additional styling for a mobile dropdown or overlay here */
+  }
+}
+
+/* Optionally style the open/close animation for the hamburger bars */
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
