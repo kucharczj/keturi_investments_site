@@ -282,6 +282,26 @@ body {
   transition: 0.3s;
 }
 
+.hamburger .line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: white; /* Make lines white */
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* If you also want a cross "X" effect, you can style the “open” class: */
+.hamburger.open .top-bun {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open .patty {
+  opacity: 0;
+}
+.hamburger.open .bottom-bun {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
 /* Show the hamburger, hide the normal nav when viewport <= 768px */
 @media (max-width: 768px) {
   .hamburger {
@@ -312,5 +332,40 @@ body {
 }
 .hamburger.open .bar:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
+}
+
+#mainNav {
+  /* Start off hidden for mobile; show only when “open” */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* or full white, etc. */
+  transform: translateX(100%); 
+  transition: transform 0.4s ease;
+}
+
+#mainNav.open {
+  transform: translateX(0);
+}
+
+/* Sub-menu overlay is hidden by default */
+#aboutOverlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #fff; /* a white ‘layer’ for sub-links */
+  padding: 2rem;
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+}
+
+#aboutOverlay.overlay-visible {
+  transform: translateX(0);
+}
+
+.overlay-hidden {
+  display: none;
 }
 
