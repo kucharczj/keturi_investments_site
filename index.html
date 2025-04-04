@@ -21,35 +21,38 @@
 </head>
 <body>
 
-<!-- Replace your current header with something like this: -->
 <header class="site-header">
-  <div class="header-inner container--fluid">
+  <div class="header-inner">
     <!-- Logo / Site Title -->
     <div class="header-title">
-      <a id="site-title" href="index.html">KETURI Investment Management</a>
+      <a href="index.html">KETURI Investment Management</a>
     </div>
-    
-    <!-- Main Navigation -->
-    <nav class="header-nav">
-      <ul class="header-nav-list">
-        <li class="header-nav-item header-nav-item--folder">
-          <!-- The “folder” or dropdown -->
-          <a href="#" class="folder-title">About</a>
+
+    <!-- Hamburger Button (Hidden by default on desktop) -->
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+      <!-- A common approach is three spans or divs: -->
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <!-- Navigation (Desktop & Mobile) -->
+    <nav class="header-nav" id="mainNav">
+      <ul>
+        <li class="nav-folder">
+          <a href="about.html" class="folder-title">About</a>
           <ul class="folder-dropdown">
             <li><a href="ourname.html">Our Name</a></li>
             <li><a href="whatwedo.html">What We Do</a></li>
           </ul>
         </li>
-
-        <li class="header-nav-item">
-          <a href="ourphilosophy.html">Our Philosophy</a>
-        </li>
+        <li><a href="ourphilosophy.html">Our Philosophy</a></li>
       </ul>
     </nav>
 
-    <!-- “Contact Us” CTA -->
+    <!-- CTA Button in Header -->
     <div class="header-cta">
-      <a class="btn cta-button" href="contactus.html">Contact Us</a>
+      <a href="contactus.html" class="cta-button">Contact Us</a>
     </div>
   </div>
 </header>
