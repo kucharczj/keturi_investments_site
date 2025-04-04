@@ -18,7 +18,7 @@ body {
 
 /* Make header transparent and layered over hero */
 .site-header {
-  background: transparent; /* transparent so hero shows behind */
+  background: transparent !important; /* transparent so hero shows behind */
   position: absolute;      /* sits on top of hero image */
   top: 0;
   left: 0;
