@@ -15,9 +15,12 @@ body {
 
 /* Header */
 .site-header {
-  background: transparent !important; /* or #fff if you want a solid color */
+  position: absolute; 
+  top: 0;
+  left: 0;
   width: 100%;
-  position: relative;
+  z-index: 999; /* ensures the header is on top of the hero */
+  background: transparent !important; /* keep it transparent to see hero behind */
 }
 
 .header-inner {
@@ -32,9 +35,11 @@ body {
 /* Logo */
 .header-title a {
   text-decoration: none;
-  color: #ffffff; /* white text over the hero background */
-  font-weight: 300; /* lighter style to match your screenshot */
-  font-size: 1.5rem; /* slightly larger */
+  /* A light bluish-gray color to match your screenshot text: */
+  color: #b2c7d9; 
+  font-weight: 300;  /* keep it light */
+  font-size: 2rem;   /* slightly larger for prominence */
+  letter-spacing: 0.1em; /* subtle spacing to mimic the style */
 }
 
 /* Desktop Nav */
@@ -46,8 +51,14 @@ body {
 
 .desktop-nav a {
   text-decoration: none;
-  color: #ffffff; /* White text to overlay on the hero if your header is transparent */
-  font-weight: 300; /* lighter style to match your screenshot */
+  color: #b2c7d9;    /* same bluish-gray as the logo */
+  font-weight: 300;  /* light style */
+  font-size: 1rem;   /* slightly bigger than default */
+  letter-spacing: 0.05em;
+}
+
+.desktop-nav a:hover {
+  text-decoration: underline;
 }
 
 /* CTA Button in Header */
@@ -58,6 +69,7 @@ body {
   text-decoration: none;
   border-radius: 3px;
   font-weight: 400; /* Not too bold, to match the style */
+  letter-spacing: 0.05em;
 }
 
 /* Hide hamburger and mobile nav by default on desktop */
@@ -121,3 +133,118 @@ body {
     font-weight: 300;
   }
 }
+/* ================================
+   5) Hero Section
+   ================================ */
+.hero {
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 70vh;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Large hero gets more vertical space */
+.hero-large {
+  min-height: 80vh;
+}
+
+/* Dark overlay to ensure text is readable */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* 
+   The hero content sits above the overlay,
+   so we can read text easily
+*/
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  /* 
+     If you want the big hero text in the same bluish color, 
+     you can do color: #b2c7d9 
+     or keep it #fff 
+  */
+  color: #b2c7d9; 
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #6b8fa7;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+/* ================================
+   6) Section styling, etc.
+   ================================ */
+.section-medium {
+  padding: 3rem 1rem;
+}
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 
+   If you want the big text 
+   (“We manage financial assets...”) 
+   to have a lighter or bigger style, 
+   you could do something like:
+
+   .section-inner h2 {
+     font-size: 2rem;
+     font-weight: 300;
+     color: #6b8fa7;
+     text-align: center;
+     margin-bottom: 2rem;
+   }
+*/
+
+/* 
+   For multi-column layout
+*/
+.two-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.two-columns .column {
+  flex: 1 1 300px;
+}
+
+/* 
+   If you want a slight color for sub-headings or paragraphs,
+   you can tweak them similarly:
+
+   .two-columns h3 {
+     color: #6b8fa7;
+     font-weight: 300;
+   }
+*/
