@@ -1,31 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Set footer year dynamically
-  const yearSpan = document.getElementById('year');
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
-
-  // Basic Hamburger toggle for mobile nav
   const hamburgerBtn = document.getElementById('hamburgerBtn');
-  const mobileNav = document.getElementById('mobileNav');
+  const mainNav      = document.getElementById('mainNav');
+  const aboutLink    = document.getElementById('aboutLink');
+  const aboutOverlay = document.getElementById('aboutOverlay');
+  const backBtn      = document.getElementById('backBtn');
 
-  hamburgerBtn.addEventListener('click', () => {
-    mobileNav.classList.toggle('open');
+  // Toggle navigation when hamburger is clicked
+  hamburgerBtn.addEventListener('click', function () {
+    mainNav.classList.toggle('open');
     hamburgerBtn.classList.toggle('open');
   });
 
-  // Additional functionality: "About" sub-overlay toggle
-  const aboutLink = document.getElementById('aboutLink');
-  const aboutOverlay = document.getElementById('aboutOverlay');
-  const backBtn = document.getElementById('backBtn');
-
-  aboutLink.addEventListener('click', (e) => {
+  // Show the About submenu overlay
+  aboutLink.addEventListener('click', function (e) {
     e.preventDefault();
     aboutOverlay.classList.remove('overlay-hidden');
     aboutOverlay.classList.add('overlay-visible');
   });
 
-  backBtn.addEventListener('click', () => {
+  // Hide the About submenu overlay when back is clicked
+  backBtn.addEventListener('click', function () {
     aboutOverlay.classList.remove('overlay-visible');
     aboutOverlay.classList.add('overlay-hidden');
   });
