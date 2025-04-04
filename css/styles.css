@@ -10,24 +10,14 @@ body {
   font-family: 'Work Sans', 'Roboto', sans-serif;
   color: #333;
   background: #fff;
-  line-height: 1.8em;
-  font-weight: 300;
-  text-transform: none;
-  
+  line-height: 1.6;
 }
 
-/* HEADER
-   -------------------------------------------------- */
-
-/* Make header transparent and layered over hero */
+/* Header */
 .site-header {
-  background: transparent !important; /* transparent so hero shows behind */
-  position: absolute;      /* sits on top of hero image */
-  top: 0;
-  left: 0;
+  background: transparent; /* or #fff if you want a solid color */
   width: 100%;
-  border: none;            /* remove the bottom border */
-  z-index: 10;            /* ensures it sits above hero overlay */
+  position: relative;
 }
 
 .header-inner {
@@ -39,333 +29,95 @@ body {
   justify-content: space-between;
 }
 
-/* Make the site title big, letter-spaced, and light in color */
+/* Logo */
 .header-title a {
-  font-family: 'Work Sans', 'Roboto', sans-serif;
-  font-weight: 300;      /* Lighter weight for a tall, airy look */
-  letter-spacing: 0.08em;/* Increase spacing to mimic the screenshot */
-  text-transform: uppercase; 
-  font-size: 1.2rem;     /* Adjust to taste */
-  color: #fff;           /* If you want it white over the hero image */
+  text-decoration: none;
+  color: #ffffff; /* white text over the hero background */
+  font-weight: 300; /* lighter style to match your screenshot */
+  font-size: 1.5rem; /* slightly larger */
 }
 
-/* Nav items float in the top-right, also light text */
-.header-nav ul {
+/* Desktop Nav */
+.desktop-nav ul {
   list-style: none;
   display: flex;
-  gap: 2rem; /* a bit more space between items */
-  align-items: center;
+  gap: 2rem;
 }
 
-.header-nav a {
-  font-family: 'Work Sans', 'Roboto', sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #ccc;          /* a lighter gray, or #bbb, to match a subdued look */
-  font-size: 0.85rem;   /* tweak as needed */
-}
-
-.header-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Dropdown Folder (About) */
-.nav-folder {
-  position: relative;
-}
-
-.nav-folder .folder-dropdown {
-  display: none;
-  position: absolute;
-  top: 2rem;
-  left: 0;
-  background: #fff;
-  border: 1px solid #eee;
-  padding: 0.5rem;
-  list-style: none;
-}
-
-.nav-folder:hover .folder-dropdown {
-  display: block;
-}
-
-.folder-dropdown li {
-  margin: 0.5rem 0;
-}
-
-.folder-dropdown a {
-  display: block;
-  white-space: nowrap;
-  color: #333; /* darker text inside dropdown */
+.desktop-nav a {
+  text-decoration: none;
+  color: #ffffff; /* White text to overlay on the hero if your header is transparent */
+  font-weight: 300; /* lighter style to match your screenshot */
 }
 
 /* CTA Button in Header */
 .header-cta .cta-button {
-  background: #6f8da6; /* a bluish color for the button */
+  background: #6b8fa7; /* or your desired bluish color from the screenshot */
   color: #fff;
   padding: 0.5rem 1rem;
   text-decoration: none;
   border-radius: 3px;
-  font-weight: 600;
+  font-weight: 400; /* Not too bold, to match the style */
 }
 
-/* HERO
-   -------------------------------------------------- */
-
-.hero {
-  position: relative;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  min-height: 70vh;
-  background-size: cover;
-  background-position: center;
+/* Hide hamburger and mobile nav by default on desktop */
+.hamburger,
+.mobile-nav {
+  display: none;
 }
 
-.hero-large {
-  min-height: 80vh;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4); /* dark overlay to read text more easily */
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
-  padding: 2rem;
-}
-
-/* Larger and lighter text for the main hero heading */
-.hero-content h1 {
-  font-family: 'Work Sans', 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 3rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-/* "Learn More" button => bluish with white text */
-.hero-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  background-color: #6f8da6; 
-  color: #ffffff;
-  padding: 0.75rem 1.25rem;
-  text-decoration: none;
-  border-radius: 4px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 600;
-}
-
-/* SECTIONS
-   -------------------------------------------------- */
-.section-medium {
-  padding: 3rem 1rem;
-}
-
-.section-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Layout Helpers */
-.two-columns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.two-columns .column {
-  flex: 1 1 300px;
-}
-
-/* FOOTER
-   -------------------------------------------------- */
-.site-footer {
-  background: 206.47058824, 16.34615385%, 40.78431373%;
-  padding-left: 17px;
-  padding-right: 17px;
-  text-align: center;
-}
-
-.footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  color: #333;
-}
-
-/* CONTACT FORM
-   -------------------------------------------------- */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 600px;
-  margin-top: 2rem;
-}
-
-.contact-form label {
-  margin-top: 1rem;
-  font-weight: 600;
-}
-
-.contact-form input,
-.contact-form textarea {
-  margin-top: 0.5rem;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-.contact-form button {
-  margin-top: 1.5rem;
-  padding: 0.75rem 1rem;
-  background: #000;
-  color: #fff;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* RESPONSIVE ADJUSTMENTS
-   -------------------------------------------------- */
+/* =========== MOBILE STYLES ========== */
 @media (max-width: 768px) {
-  .header-inner {
-    flex-wrap: wrap;
-  }
-  .two-columns {
-    flex-direction: column;
-  }
-  .folder-dropdown {
-    position: static;
-  }
-  .nav-folder:hover .folder-dropdown {
+  /* Hide desktop nav; show hamburger */
+  .desktop-nav {
     display: none;
   }
-  .nav-folder .folder-dropdown {
-    display: block;
-    border: none;
-  }
-
-  /* Make hero text a bit smaller on mobile */
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-}
-
-/* Basic styling for the hamburger icon (initially hidden). */
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.hamburger .bar {
-  width: 25px;
-  height: 3px;
-  background-color: #333;  /* or your desired color */
-  margin: 4px 0;
-  transition: 0.3s;
-}
-
-.hamburger .line {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: white; /* Make lines white */
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-/* If you also want a cross "X" effect, you can style the “open” class: */
-.hamburger.open .top-bun {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.hamburger.open .patty {
-  opacity: 0;
-}
-.hamburger.open .bottom-bun {
-  transform: rotate(-45deg) translate(4px, -4px);
-}
-
-/* Show the hamburger, hide the normal nav when viewport <= 768px */
-@media (max-width: 768px) {
   .hamburger {
-    display: flex; /* Show hamburger on mobile */
+    display: inline-block;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
-  .header-nav {
-    display: none; /* Hide normal nav on mobile by default */
-  }
-
-  /* If we add an “open” class in JS, we can override display to show. */
-  .header-nav.open {
+  .hamburger .line {
     display: block;
-    position: absolute;
-    top: 70px; /* or wherever you want it to appear */
-    right: 0;
-    width: 200px; /* or 100% if you want a full overlay */
-    background: #fff; /* If you want a panel background, else transparent */
-    /* Additional styling for a mobile dropdown or overlay here */
+    width: 24px;
+    height: 2px;
+    background: #ffffff; /* white lines */
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+
+  /* Mobile Nav (overlay style) */
+  .mobile-nav {
+    display: block; /* or none, then use transforms to show/hide */
+    position: fixed;
+    top: 0; right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    z-index: 9999; /* on top */
+    padding: 2rem;
+  }
+
+  /* If .open is added, nav slides in */
+  .mobile-nav.open {
+    transform: translateX(0);
+  }
+
+  .mobile-nav ul {
+    list-style: none;
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .mobile-nav li {
+    margin: 1rem 0;
+  }
+  .mobile-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 300;
   }
 }
-
-/* Optionally style the open/close animation for the hamburger bars */
-.hamburger.open .bar:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.hamburger.open .bar:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.open .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-#mainNav {
-  /* Start off hidden for mobile; show only when “open” */
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5); /* or full white, etc. */
-  transform: translateX(100%); 
-  transition: transform 0.4s ease;
-}
-
-#mainNav.open {
-  transform: translateX(0);
-}
-
-/* Sub-menu overlay is hidden by default */
-#aboutOverlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: #fff; /* a white ‘layer’ for sub-links */
-  padding: 2rem;
-  transform: translateX(100%);
-  transition: transform 0.4s ease;
-}
-
-#aboutOverlay.overlay-visible {
-  transform: translateX(0);
-}
-
-.overlay-hidden {
-  display: none;
-}
-
