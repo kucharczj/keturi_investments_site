@@ -193,8 +193,9 @@ body {
 /* FOOTER
    -------------------------------------------------- */
 .site-footer {
-  background: #f8f8f8;
-  padding: 1rem;
+  background: 204.54545455, 19.64285714%, 56.07843137%;
+  padding-left: 17px;
+  padding-right: 17px;
   text-align: center;
 }
 
