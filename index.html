@@ -31,22 +31,25 @@
     <!-- Hamburger Button (Hidden by default on desktop) -->
     <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
       <!-- A common approach is three spans or divs: -->
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
+      <span class="line top-bun"></span>
+      <span class="line patty"></span>
+      <span class="line bottom-bun"></span>
     </button>
 
     <!-- Navigation (Desktop & Mobile) -->
-    <nav class="header-nav" id="mainNav">
-      <ul>
-        <li class="nav-folder">
-          <a href="about.html" class="folder-title">About</a>
-          <ul class="folder-dropdown">
-            <li><a href="ourname.html">Our Name</a></li>
-            <li><a href="whatwedo.html">What We Do</a></li>
-          </ul>
+    <nav id="mainNav" class="nav-closed">
+      <ul class ="main-links">
+        <li>
+          <a href="#" id="aboutLink">About</a> <!-- Clicking "About" reveals sub-menu -->
+          <div id="aboutOverlay" class="overlay-hidden">
+            <button id="backBtn">← Back</button>
+            <ul>
+              <li><a href="#">Our Name</a></li>
+              <li><a href="#">What We Do</a></li>
+            </ul>
+          </div>
         </li>
-        <li><a href="ourphilosophy.html">Our Philosophy</a></li>
+        <li><a href="#">Our Philosophy</a></li>
       </ul>
     </nav>
 
