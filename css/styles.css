@@ -10,7 +10,10 @@ body {
   font-family: 'Work Sans', 'Roboto', sans-serif;
   color: #333;
   background: #fff;
-  line-height: 1.6;
+  line-height: 1.8em;
+  font-weight: 300;
+  text-transform: none;
+  
 }
 
 /* HEADER
