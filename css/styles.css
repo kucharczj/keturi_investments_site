@@ -939,6 +939,14 @@
   box-sizing: border-box;
 }
 
+/* Body / Fonts */
+body {
+  font-family: 'Work Sans', 'Roboto', sans-serif;
+  color: #333;
+  background: #fff;
+  line-height: 1.6;
+}
+
 /* Global Header Styling */
 h1 {
   font-family: 'Work Sans', sans-serif;
