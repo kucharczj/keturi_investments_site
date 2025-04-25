@@ -1,89 +1,1019 @@
-/* Basic Reset */
+/* 1) ————————————————————————————— Custom Properties ————————————————————————————— */
+:root {
+  /* — copy every single --variable:value; line from your old Squarespace :root block here — */
+  --base-font-size: 16px;
+  --heading-font-font-family: 'Work Sans';
+  --heading-font-font-weight: 300;
+  --heading-font-letter-spacing: .16em;
+  --heading-1-size: 4rem;
+  --normal-text-size: 1rem;
+  --body-font-font-family: 'Roboto';
+  --body-font-font-weight: 300;
+  --body-font-line-height: 1.8em;
+  --body-font-letter-spacing: 0em;
+  --siteBackgroundColor: #fff;
+  --paragraphMediumColor: hsla(var(--black-hsl),1);
+  --siteTitleColor: hsla(var(--white-hsl),1);
+  --darkAccent-hsl: 206.47,16.35%,40.78%;
+  --previous-section-divider-offset: 0px;
+  --primary-button-rounded-border-top-left-radius: 6.4px;
+  --primary-button-rounded-border-top-right-radius: 6.4px;
+  --primary-button-rounded-border-bottom-left-radius: 6.4px;
+  --primary-button-rounded-border-bottom-right-radius: 6.4px;
+  --primaryButtonPadding: 1.2rem;
+  --primary-button-padding-x: 2.004rem;
+  --primary-button-padding-y: 1.2rem;
+  --primary-button-stroke: 0px;
+  --secondary-button-rounded-border-top-left-radius: 6.4px;
+  --secondary-button-rounded-border-top-right-radius: 6.4px;
+  --secondary-button-rounded-border-bottom-left-radius: 6.4px;
+  --secondary-button-rounded-border-bottom-right-radius: 6.4px;
+  --secondary-button-padding-x: 2.004rem;
+  --secondary-button-padding-y: 1.2rem;
+  --secondary-button-stroke: 0px;
+  --tertiary-button-rounded-border-top-left-radius: 6.4px;
+  --tertiary-button-rounded-border-top-right-radius: 6.4px;
+  --tertiary-button-rounded-border-bottom-left-radius: 6.4px;
+  --tertiary-button-rounded-border-bottom-right-radius: 6.4px;
+  --tertiary-button-padding-x: 2.004rem;
+  --tertiary-button-padding-y: 1.2rem;
+  --tertiary-button-stroke: 0px;
+  --form-field-shape-border-top-left-radius: 5px;
+  --form-field-shape-border-top-right-radius: 5px;
+  --form-field-shape-border-bottom-left-radius: 5px;
+  --form-field-shape-border-bottom-right-radius: 5px;
+  --form-field-border-thickness: 1px;
+  --form-field-padding-vertical: 10px;
+  --form-field-padding-horizontal: 10px;
+  --form-field-checkbox-shape-border-top-left-radius: 5px;
+  --form-field-checkbox-shape-border-top-right-radius: 5px;
+  --form-field-checkbox-shape-border-bottom-left-radius: 5px;
+  --form-field-checkbox-shape-border-bottom-right-radius: 5px;
+  --form-field-checkbox-border-thickness: 1px;
+  --form-field-checkbox-size: 16px;
+  --form-field-checkbox-space-between-icon-and-text: 11px;
+  --form-field-checkbox-padding-vertical: 10px;
+  --form-field-checkbox-padding-horizontal: 10px;
+  --form-field-checkbox-row-gap: 12px;
+  --form-field-checkbox-column-gap: 20px;
+  --form-field-radio-shape-border-top-left-radius: 5px;
+  --form-field-radio-shape-border-top-right-radius: 5px;
+  --form-field-radio-shape-border-bottom-left-radius: 5px;
+  --form-field-radio-shape-border-bottom-right-radius: 5px;
+  --form-field-radio-border-thickness: 1px;
+  --form-field-radio-size: 17px;
+  --form-field-radio-space-between-icon-and-text: 11px;
+  --form-field-radio-padding-vertical: 10px;
+  --form-field-radio-padding-horizontal: 10px;
+  --form-field-radio-row-gap: 12px;
+  --form-field-radio-column-gap: 20px;
+  --form-field-dropdown-icon-thickness: 1px;
+  --form-field-dropdown-icon-size: 18px;
+  --form-field-survey-shape-border-top-left-radius: 5px;
+  --form-field-survey-shape-border-top-right-radius: 5px;
+  --form-field-survey-shape-border-bottom-left-radius: 5px;
+  --form-field-survey-shape-border-bottom-right-radius: 5px;
+  --form-field-survey-border-thickness: 1px;
+  --form-field-survey-size: 17px;
+  --form-label-spacing-bottom: 4px;
+  --form-description-spacing-bottom: 4px;
+  --form-caption-spacing-bottom: 2px;
+  --form-field-spacing-bottom: 20px;
+  --form-field-column-gap: 10px;
+  --tweak-global-animations-animation-duration: .1s;
+  --tweak-global-animations-animation-delay: .1s;
+  --base-font-size: 16px;
+  --heading-font-font-family: Work Sans;
+  --heading-font-font-style: normal;
+    --heading-font-font-weight: 300;
+    --heading-font-text-transform: uppercase;
+    --heading-font-letter-spacing: .16em;
+    --heading-font-line-height: 1.4em;
+    --body-font-font-family: Roboto;
+    --body-font-font-style: normal;
+    --body-font-font-weight: 300;
+    --body-font-text-transform: none;
+    --body-font-letter-spacing: 0em;
+    --body-font-line-height: 1.8em;
+    --meta-font-font-family: Work Sans;
+    --meta-font-font-style: normal;
+    --meta-font-font-weight: 400;
+    --meta-font-text-transform: none;
+    --meta-font-letter-spacing: 0em;
+    --meta-font-line-height: 1.2em;
+    --heading-1-size: 4rem;
+    --heading-1-size-value: 4;
+    --heading-2-size: 2.8rem;
+    --heading-2-size-value: 2.8;
+    --heading-3-size: 2.2rem;
+    --heading-3-size-value: 2.2;
+    --heading-4-size: 1.2rem;
+    --heading-4-size-value: 1.2;
+    --large-text-size: 1.4rem;
+    --large-text-size-value: 1.4;
+    --normal-text-size: 1rem;
+    --normal-text-size-value: 1;
+    --small-text-size: .9rem;
+    --small-text-size-value: .9;
+    --normal-meta-size: 1rem;
+    --normal-meta-size-value: 1;
+    --course-list-chapter-item-chapter-name-font-font-family: var(--heading-font-font-family);
+    --course-list-chapter-item-chapter-name-font-font-style: var(--heading-font-font-style);
+    --course-list-chapter-item-chapter-name-font-font-weight: var(--heading-font-font-weight);
+    --course-list-chapter-item-chapter-name-font-text-transform: var(--heading-font-text-transform);
+    --course-list-chapter-item-chapter-name-font-letter-spacing: var(--heading-font-letter-spacing);
+    --course-list-chapter-item-chapter-name-font-line-height: var(--heading-font-line-height);
+    --course-list-chapter-item-chapter-name-font-font-size: 2rem;
+    --course-list-chapter-item-chapter-name-font-font-size-value: 2;
+    --course-item-name-font-font-family: var(--heading-font-font-family);
+    --course-item-name-font-font-style: var(--heading-font-font-style);
+    --course-item-name-font-font-weight: var(--heading-font-font-weight);
+    --course-item-name-font-text-transform: var(--heading-font-text-transform);
+    --course-item-name-font-letter-spacing: var(--heading-font-letter-spacing);
+    --course-item-name-font-line-height: var(--heading-font-line-height);
+    --course-item-name-font-font-size: 2rem;
+    --course-item-name-font-font-size-value: 2;
+    --events-item-pagination-date-font-font-family: var(--meta-font-font-family);
+    --events-item-pagination-date-font-font-style: var(--meta-font-font-style);
+    --events-item-pagination-date-font-font-weight: var(--meta-font-font-weight);
+    --events-item-pagination-date-font-text-transform: var(--meta-font-text-transform);
+    --events-item-pagination-date-font-letter-spacing: var(--meta-font-letter-spacing);
+    --events-item-pagination-date-font-line-height: var(--meta-font-line-height);
+    --events-item-pagination-date-font-font-size: var(--normal-meta-size);
+    --events-item-pagination-date-font-font-size-value: var(--normal-meta-size-value);
+    --blog-grid-masonry-list-excerpt-font-font-family: var(--body-font-font-family);
+    --blog-grid-masonry-list-excerpt-font-font-style: var(--body-font-font-style);
+    --blog-grid-masonry-list-excerpt-font-font-weight: var(--body-font-font-weight);
+    --blog-grid-masonry-list-excerpt-font-text-transform: var(--body-font-text-transform);
+    --blog-grid-masonry-list-excerpt-font-letter-spacing: var(--body-font-letter-spacing);
+    --blog-grid-masonry-list-excerpt-font-line-height: var(--body-font-line-height);
+    --blog-grid-masonry-list-excerpt-font-font-size: var(--small-text-size);
+    --blog-grid-masonry-list-excerpt-font-font-size-value: var(--small-text-size-value);
+    --product-basic-item-price-font-font-family: var(--heading-font-font-family);
+    --product-basic-item-price-font-font-style: var(--heading-font-font-style);
+    --product-basic-item-price-font-font-weight: var(--heading-font-font-weight);
+    --product-basic-item-price-font-text-transform: var(--heading-font-text-transform);
+    --product-basic-item-price-font-letter-spacing: var(--heading-font-letter-spacing);
+    --product-basic-item-price-font-line-height: var(--heading-font-line-height);
+    --product-basic-item-price-font-font-size: var(--heading-4-size);
+    --product-basic-item-price-font-font-size-value: var(--heading-4-size-value);
+    --primary-button-font-font-family: Roboto;
+    --primary-button-font-font-style: normal;
+    --primary-button-font-font-weight: 500;
+    --primary-button-font-text-transform: none;
+    --primary-button-font-letter-spacing: .02em;
+    --primary-button-font-line-height: 1.2em;
+    --primary-button-font-font-size: 1rem;
+    --primary-button-font-font-size-value: 1;
+    --portfolio-hover-follow-title-font-font-family: var(--heading-font-font-family);
+    --portfolio-hover-follow-title-font-font-style: var(--heading-font-font-style);
+    --portfolio-hover-follow-title-font-font-weight: var(--heading-font-font-weight);
+    --portfolio-hover-follow-title-font-text-transform: var(--heading-font-text-transform);
+    --portfolio-hover-follow-title-font-letter-spacing: var(--heading-font-letter-spacing);
+    --portfolio-hover-follow-title-font-line-height: var(--heading-font-line-height);
+    --portfolio-hover-follow-title-font-font-size: var(--heading-1-size);
+    --portfolio-hover-follow-title-font-font-size-value: var(--heading-1-size-value);
+    --video-item-meta-font-font-family: var(--meta-font-font-family);
+    --video-item-meta-font-font-style: var(--meta-font-font-style);
+    --video-item-meta-font-font-weight: var(--meta-font-font-weight);
+    --video-item-meta-font-text-transform: var(--meta-font-text-transform);
+    --video-item-meta-font-letter-spacing: var(--meta-font-letter-spacing);
+    --video-item-meta-font-line-height: var(--meta-font-line-height);
+    --video-item-meta-font-font-size: var(--normal-meta-size);
+    --video-item-meta-font-font-size-value: var(--normal-meta-size-value);
+    --course-list-chapter-item-chapter-meta-font-font-family: var(--meta-font-font-family);
+    --course-list-chapter-item-chapter-meta-font-font-style: var(--meta-font-font-style);
+    --course-list-chapter-item-chapter-meta-font-font-weight: var(--meta-font-font-weight);
+    --course-list-chapter-item-chapter-meta-font-text-transform: var(--meta-font-text-transform);
+    --course-list-chapter-item-chapter-meta-font-letter-spacing: var(--meta-font-letter-spacing);
+    --course-list-chapter-item-chapter-meta-font-line-height: var(--meta-font-line-height);
+    --course-list-chapter-item-chapter-meta-font-font-size: .75rem;
+    --course-list-chapter-item-chapter-meta-font-font-size-value: .75;
+    --form-block-survey-title-text-font-font-family: var(--body-font-font-family);
+    --form-block-survey-title-text-font-font-style: var(--body-font-font-style);
+    --form-block-survey-title-text-font-font-weight: var(--body-font-font-weight);
+    --form-block-survey-title-text-font-text-transform: var(--body-font-text-transform);
+    --form-block-survey-title-text-font-letter-spacing: var(--body-font-letter-spacing);
+    --form-block-survey-title-text-font-line-height: var(--body-font-line-height);
+    --form-block-survey-title-text-font-font-size: var(--normal-text-size);
+    --form-block-survey-title-text-font-font-size-value: var(--normal-text-size-value);
+    --newsletter-block-title-text-font-font-family: var(--heading-font-font-family);
+    --newsletter-block-title-text-font-font-style: var(--heading-font-font-style);
+    --newsletter-block-title-text-font-font-weight: var(--heading-font-font-weight);
+    --newsletter-block-title-text-font-text-transform: var(--heading-font-text-transform);
+    --newsletter-block-title-text-font-letter-spacing: var(--heading-font-letter-spacing);
+    --newsletter-block-title-text-font-line-height: var(--heading-font-line-height);
+    --newsletter-block-title-text-font-font-size: var(--heading-3-size);
+    --newsletter-block-title-text-font-font-size-value: var(--heading-3-size-value);
+    --course-item-side-nav-chapter-name-font-font-family: var(--heading-font-font-family);
+    --course-item-side-nav-chapter-name-font-font-style: var(--heading-font-font-style);
+    --course-item-side-nav-chapter-name-font-font-weight: var(--heading-font-font-weight);
+    --course-item-side-nav-chapter-name-font-text-transform: var(--heading-font-text-transform);
+    --course-item-side-nav-chapter-name-font-letter-spacing: var(--heading-font-letter-spacing);
+    --course-item-side-nav-chapter-name-font-line-height: var(--heading-font-line-height);
+    --course-item-side-nav-chapter-name-font-font-size: 1.5rem;
+    --course-item-side-nav-chapter-name-font-font-size-value: 1.5;
+    --newsletter-block-description-text-font-font-family: var(--body-font-font-family);
+    --newsletter-block-description-text-font-font-style: var(--body-font-font-style);
+    --newsletter-block-description-text-font-font-weight: var(--body-font-font-weight);
+    --newsletter-block-description-text-font-text-transform: var(--body-font-text-transform);
+    --newsletter-block-description-text-font-letter-spacing: var(--body-font-letter-spacing);
+    --newsletter-block-description-text-font-line-height: var(--body-font-line-height);
+    --newsletter-block-description-text-font-font-size: var(--normal-text-size);
+    --newsletter-block-description-text-font-font-size-value: var(--normal-text-size-value);
+    --form-block-option-text-font-font-family: var(--body-font-font-family);
+    --form-block-option-text-font-font-style: var(--body-font-font-style);
+    --form-block-option-text-font-font-weight: var(--body-font-font-weight);
+    --form-block-option-text-font-text-transform: var(--body-font-text-transform);
+    --form-block-option-text-font-letter-spacing: var(--body-font-letter-spacing);
+    --form-block-option-text-font-line-height: var(--body-font-line-height);
+    --form-block-option-text-font-font-size: var(--small-text-size);
+    --form-block-option-text-font-font-size-value: var(--small-text-size-value);
+    --course-item-side-nav-chapter-meta-font-font-family: var(--meta-font-font-family);
+    --course-item-side-nav-chapter-meta-font-font-style: var(--meta-font-font-style);
+    --course-item-side-nav-chapter-meta-font-font-weight: var(--meta-font-font-weight);
+    --course-item-side-nav-chapter-meta-font-text-transform: var(--meta-font-text-transform);
+    --course-item-side-nav-chapter-meta-font-letter-spacing: var(--meta-font-letter-spacing);
+    --course-item-side-nav-chapter-meta-font-line-height: var(--meta-font-line-height);
+    --course-item-side-nav-chapter-meta-font-font-size: .8rem;
+    --course-item-side-nav-chapter-meta-font-font-size-value: .8;
+    --course-list-course-description-font-font-family: var(--body-font-font-family);
+    --course-list-course-description-font-font-style: var(--body-font-font-style);
+    --course-list-course-description-font-font-weight: var(--body-font-font-weight);
+    --course-list-course-description-font-text-transform: var(--body-font-text-transform);
+    --course-list-course-description-font-letter-spacing: var(--body-font-letter-spacing);
+    --course-list-course-description-font-line-height: var(--body-font-line-height);
+    --course-list-course-description-font-font-size: var(--large-text-size);
+    --course-list-course-description-font-font-size-value: var(--large-text-size-value);
+    --list-section-title-text-font-font-family: var(--heading-font-font-family);
+    --list-section-title-text-font-font-style: var(--heading-font-font-style);
+    --list-section-title-text-font-font-weight: var(--heading-font-font-weight);
+    --list-section-title-text-font-text-transform: var(--heading-font-text-transform);
+    --list-section-title-text-font-letter-spacing: var(--heading-font-letter-spacing);
+    --list-section-title-text-font-line-height: var(--heading-font-line-height);
+    --list-section-title-text-font-font-size: var(--heading-2-size);
+    --list-section-title-text-font-font-size-value: var(--heading-2-size-value);
+    --course-list-grid-layout-chapter-name-font-font-family: var(--heading-font-font-family);
+    --course-list-grid-layout-chapter-name-font-font-style: var(--heading-font-font-style);
+    --course-list-grid-layout-chapter-name-font-font-weight: var(--heading-font-font-weight);
+    --course-list-grid-layout-chapter-name-font-text-transform: var(--heading-font-text-transform);
+    --course-list-grid-layout-chapter-name-font-letter-spacing: var(--heading-font-letter-spacing);
+    --course-list-grid-layout-chapter-name-font-line-height: var(--heading-font-line-height);
+    --course-list-grid-layout-chapter-name-font-font-size: 2rem;
+    --course-list-grid-layout-chapter-name-font-font-size-value: 2;
+    --menu-block-item-price-font-font-family: var(--body-font-font-family);
+    --menu-block-item-price-font-font-style: var(--body-font-font-style);
+    --menu-block-item-price-font-font-weight: var(--body-font-font-weight);
+    --menu-block-item-price-font-text-transform: var(--body-font-text-transform);
+    --menu-block-item-price-font-letter-spacing: var(--body-font-letter-spacing);
+    --menu-block-item-price-font-line-height: var(--body-font-line-height);
+    --menu-block-item-price-font-font-size: var(--normal-text-size);
+    --menu-block-item-price-font-font-size-value: var(--normal-text-size-value);
+    --secondary-button-font-font-family: Roboto;
+    --secondary-button-font-font-style: normal;
+    --secondary-button-font-font-weight: 500;
+    --secondary-button-font-text-transform: none;
+    --secondary-button-font-letter-spacing: .02em;
+    --secondary-button-font-line-height: 1.2em;
+    --secondary-button-font-font-size: 1.1rem;
+    --secondary-button-font-font-size-value: 1.1;
+    --course-item-chapter-name-font-font-family: var(--body-font-font-family);
+    --course-item-chapter-name-font-font-style: var(--body-font-font-style);
+    --course-item-chapter-name-font-font-weight: var(--body-font-font-weight);
+    --course-item-chapter-name-font-text-transform: var(--body-font-text-transform);
+    --course-item-chapter-name-font-letter-spacing: var(--body-font-letter-spacing);
+    --course-item-chapter-name-font-line-height: var(--body-font-line-height);
+    --course-item-chapter-name-font-font-size: 1rem;
+    --course-item-chapter-name-font-font-size-value: 1;
+    --course-item-lesson-name-font-font-family: var(--heading-font-font-family);
+    --course-item-lesson-name-font-font-style: var(--heading-font-font-style);
+    --course-item-lesson-name-font-font-weight: var(--heading-font-font-weight);
+    --course-item-lesson-name-font-text-transform: var(--heading-font-text-transform);
+    --course-item-lesson-name-font-letter-spacing: var(--heading-font-letter-spacing);
+    --course-item-lesson-name-font-line-height: var(--heading-font-line-height);
+    --course-item-lesson-name-font-font-size: 4rem;
+    --course-item-lesson-name-font-font-size-value: 4;
+    --blog-single-column-list-meta-font-font-family: var(--meta-font-font-family);
+    --blog-single-column-list-meta-font-font-style: var(--meta-font-font-style);
+    --blog-single-column-list-meta-font-font-weight: var(--meta-font-font-weight);
+    --blog-single-column-list-meta-font-text-transform: var(--meta-font-text-transform);
+    --blog-single-column-list-meta-font-letter-spacing: var(--meta-font-letter-spacing);
+    --blog-single-column-list-meta-font-line-height: var(--meta-font-line-height);
+    --blog-single-column-list-meta-font-font-size: var(--normal-meta-size);
+    --blog-single-column-list-meta-font-font-size-value: var(--normal-meta-size-value);
+    --portfolio-grid-basic-title-font-font-family: var(--heading-font-font-family);
+    --portfolio-grid-basic-title-font-font-style: var(--heading-font-font-style);
+    --portfolio-grid-basic-title-font-font-weight: var(--heading-font-font-weight);
+    --portfolio-grid-basic-title-font-text-transform: var(--heading-font-text-transform);
+    --portfolio-grid-basic-title-font-letter-spacing: var(--heading-font-letter-spacing);
+    --portfolio-grid-basic-title-font-line-height: var(--heading-font-line-height);
+    --portfolio-grid-basic-title-font-font-size: var(--heading-4-size);
+    --portfolio-grid-basic-title-font-font-size-value: var(--heading-4-size-value);
+    --product-basic-item-description-font-font-family: var(--body-font-font-family);
+    --product-basic-item-description-font-font-style: var(--body-font-font-style);
+    --product-basic-item-description-font-font-weight: var(--body-font-font-weight);
+    --product-basic-item-description-font-text-transform: var(--body-font-text-transform);
+    --product-basic-item-description-font-letter-spacing: var(--body-font-letter-spacing);
+    --product-basic-item-description-font-line-height: var(--body-font-line-height);
+    --product-basic-item-description-font-font-size: var(--normal-text-size);
+    --product-basic-item-description-font-font-size-value: var(--normal-text-size-value);
+    --course-list-grid-layout-chapter-meta-font-font-family: var(--meta-font-font-family);
+    --course-list-grid-layout-chapter-meta-font-font-style: var(--meta-font-font-style);
+    --course-list-grid-layout-chapter-meta-font-font-weight: var(--meta-font-font-weight);
+    --course-list-grid-layout-chapter-meta-font-text-transform: var(--meta-font-text-transform);
+    --course-list-grid-layout-chapter-meta-font-letter-spacing: var(--meta-font-letter-spacing);
+    --course-list-grid-layout-chapter-meta-font-line-height: var(--meta-font-line-height);
+    --course-list-grid-layout-chapter-meta-font-font-size: .875rem;
+    --course-list-grid-layout-chapter-meta-font-font-size-value: .875;
+    --blog-grid-masonry-list-title-font-font-family: var(--heading-font-font-family);
+    --blog-grid-masonry-list-title-font-font-style: var(--heading-font-font-style);
+    --blog-grid-masonry-list-title-font-font-weight: var(--heading-font-font-weight);
+    --blog-grid-masonry-list-title-font-text-transform: var(--heading-font-text-transform);
+    --blog-grid-masonry-list-title-font-letter-spacing: var(--heading-font-letter-spacing);
+    --blog-grid-masonry-list-title-font-line-height: var(--heading-font-line-height);
+    --blog-grid-masonry-list-title-font-font-size: var(--heading-3-size);
+    --blog-grid-masonry-list-title-font-font-size-value: var(--heading-3-size-value);
+    --video-basic-grid-list-excerpt-font-font-family: var(--body-font-font-family);
+    --video-basic-grid-list-excerpt-font-font-style: var(--body-font-font-style);
+    --video-basic-grid-list-excerpt-font-font-weight: var(--body-font-font-weight);
+    --video-basic-grid-list-excerpt-font-text-transform: var(--body-font-text-transform);
+    --video-basic-grid-list-excerpt-font-letter-spacing: var(--body-font-letter-spacing);
+    --video-basic-grid-list-excerpt-font-line-height: var(--body-font-line-height);
+    --video-basic-grid-list-excerpt-font-font-size: var(--small-text-size);
+    --video-basic-grid-list-excerpt-font-font-size-value: var(--small-text-size-value);
+    --announcement-bar-font-font-family: var(--body-font-font-family);
+    --announcement-bar-font-font-style: var(--body-font-font-style);
+    --announcement-bar-font-font-weight: var(--body-font-font-weight);
+    --announcement-bar-font-text-transform: var(--body-font-text-transform);
+    --announcement-bar-font-letter-spacing: var(--body-font-letter-spacing);
+    --announcement-bar-font-line-height: var(--body-font-line-height);
+    --announcement-bar-font-font-size: var(--small-text-size);
+    --announcement-bar-font-font-size-value: var(--small-text-size-value);
+    --portfolio-index-background-title-font-font-family: var(--heading-font-font-family);
+    --portfolio-index-background-title-font-font-style: var(--heading-font-font-style);
+    --portfolio-index-background-title-font-font-weight: var(--heading-font-font-weight);
+    --portfolio-index-background-title-font-text-transform: var(--heading-font-text-transform);
+    --portfolio-index-background-title-font-letter-spacing: var(--heading-font-letter-spacing);
+    --portfolio-index-background-title-font-line-height: var(--heading-font-line-height);
+    --portfolio-index-background-title-font-font-size: var(--heading-1-size);
+    --portfolio-index-background-title-font-font-size-value: var(--heading-1-size-value);
+    --menu-block-item-description-font-font-family: var(--body-font-font-family);
+    --menu-block-item-description-font-font-style: var(--body-font-font-style);
+    --menu-block-item-description-font-font-weight: var(--body-font-font-weight);
+    --menu-block-item-description-font-text-transform: var(--body-font-text-transform);
+    --menu-block-item-description-font-letter-spacing: var(--body-font-letter-spacing);
+    --menu-block-item-description-font-line-height: var(--body-font-line-height);
+    --menu-block-item-description-font-font-size: var(--normal-text-size);
+    --menu-block-item-description-font-font-size-value: var(--normal-text-size-value);
+    --quote-block-text-font-font-family: var(--body-font-font-family);
+    --quote-block-text-font-font-style: var(--body-font-font-style);
+    --quote-block-text-font-font-weight: var(--body-font-font-weight);
+    --quote-block-text-font-text-transform: var(--body-font-text-transform);
+    --quote-block-text-font-letter-spacing: var(--body-font-letter-spacing);
+    --quote-block-text-font-line-height: var(--body-font-line-height);
+    --quote-block-text-font-font-size: var(--large-text-size);
+    --quote-block-text-font-font-size-value: var(--large-text-size-value);
+    --course-item-name-mobile-font-font-family: var(--heading-font-font-family);
+    --course-item-name-mobile-font-font-style: var(--heading-font-font-style);
+    --course-item-name-mobile-font-font-weight: var(--heading-font-font-weight);
+    --course-item-name-mobile-font-text-transform: var(--heading-font-text-transform);
+    --course-item-name-mobile-font-letter-spacing: var(--heading-font-letter-spacing);
+    --course-item-name-mobile-font-line-height: var(--heading-font-line-height);
+    --course-item-name-mobile-font-font-size: 1.3rem;
+    --course-item-name-mobile-font-font-size-value: 1.3;
+    --form-block-select-dropdown-text-font-font-family: var(--body-font-font-family);
+    --form-block-select-dropdown-text-font-font-style: var(--body-font-font-style);
+    --form-block-select-dropdown-text-font-font-weight: var(--body-font-font-weight);
+    --form-block-select-dropdown-text-font-text-transform: var(--body-font-text-transform);
+    --form-block-select-dropdown-text-font-letter-spacing: var(--body-font-letter-spacing);
+    --form-block-select-dropdown-text-font-line-height: var(--body-font-line-height);
+    --form-block-select-dropdown-text-font-font-size: var(--small-text-size);
+    --form-block-select-dropdown-text-font-font-size-value: var(--small-text-size-value);
+    --video-basic-grid-list-title-font-font-family: var(--heading-font-font-family);
+    --video-basic-grid-list-title-font-font-style: var(--heading-font-font-style);
+    --video-basic-grid-list-title-font-font-weight: var(--heading-font-font-weight);
+    --video-basic-grid-list-title-font-text-transform: var(--heading-font-text-transform);
+    --video-basic-grid-list-title-font-letter-spacing: var(--heading-font-letter-spacing);
+    --video-basic-grid-list-title-font-line-height: var(--heading-font-line-height);
+    --video-basic-grid-list-title-font-font-size: var(--heading-4-size);
+    --video-basic-grid-list-title-font-font-size-value: var(--heading-4-size-value);
+    --course-list-grid-layout-course-item-name-font-font-family: var(--heading-font-font-family);
+    --course-list-grid-layout-course-item-name-font-font-style: var(--heading-font-font-style);
+    --course-list-grid-layout-course-item-name-font-font-weight: var(--heading-font-font-weight);
+    --course-list-grid-layout-course-item-name-font-text-transform: var(--heading-font-text-transform);
+    --course-list-grid-layout-course-item-name-font-letter-spacing: var(--heading-font-letter-spacing);
+    --course-list-grid-layout-course-item-name-font-line-height: var(--heading-font-line-height);
+    --course-list-grid-layout-course-item-name-font-font-size: 1.125rem;
+    --course-list-grid-layout-course-item-name-font-font-size-value: 1.125;
+    --quote-block-source-font-font-family: var(--meta-font-font-family);
+    --quote-block-source-font-font-style: var(--meta-font-font-style);
+    --quote-block-source-font-font-weight: var(--meta-font-font-weight);
+    --quote-block-source-font-text-transform: var(--meta-font-text-transform);
+    --quote-block-source-font-letter-spacing: var(--meta-font-letter-spacing);
+    --quote-block-source-font-line-height: var(--meta-font-line-height);
+    --quote-block-source-font-font-size: var(--normal-meta-size);
+    --quote-block-source-font-font-size-value: var(--normal-meta-size-value);
+    --site-title-font-font-family: var(--heading-font-font-family);
+    --site-title-font-font-style: var(--heading-font-font-style);
+    --site-title-font-font-weight: var(--heading-font-font-weight);
+    --site-title-font-text-transform: var(--heading-font-text-transform);
+    --site-title-font-letter-spacing: var(--heading-font-letter-spacing);
+    --site-title-font-line-height: var(--heading-font-line-height);
+    --site-title-font-font-size: 2rem;
+    --site-title-font-font-size-value: 2;
+    --newsletter-block-button-text-font-font-family: var(--body-font-font-family);
+    --newsletter-block-button-text-font-font-style: var(--body-font-font-style);
+    --newsletter-block-button-text-font-font-weight: var(--body-font-font-weight);
+    --newsletter-block-button-text-font-text-transform: var(--body-font-text-transform);
+    --newsletter-block-button-text-font-letter-spacing: var(--body-font-letter-spacing);
+    --newsletter-block-button-text-font-line-height: var(--body-font-line-height);
+    --newsletter-block-button-text-font-font-size: var(--normal-text-size);
+    --newsletter-block-button-text-font-font-size-value: var(--normal-text-size-value);
+    --newsletter-block-footnote-text-font-font-family: var(--body-font-font-family);
+    --newsletter-block-footnote-text-font-font-style: var(--body-font-font-style);
+    --newsletter-block-footnote-text-font-font-weight: var(--body-font-font-weight);
+    --newsletter-block-footnote-text-font-text-transform: var(--body-font-text-transform);
+    --newsletter-block-footnote-text-font-letter-spacing: var(--body-font-letter-spacing);
+    --newsletter-block-footnote-text-font-line-height: var(--body-font-line-height);
+    --newsletter-block-footnote-text-font-font-size: var(--small-text-size);
+    --newsletter-block-footnote-text-font-font-size-value: var(--small-text-size-value);
+    --newsletter-block-field-text-font-font-family: var(--body-font-font-family);
+    --newsletter-block-field-text-font-font-style: var(--body-font-font-style);
+    --newsletter-block-field-text-font-font-weight: var(--body-font-font-weight);
+    --newsletter-block-field-text-font-text-transform: var(--body-font-text-transform);
+    --newsletter-block-field-text-font-letter-spacing: var(--body-font-letter-spacing);
+    --newsletter-block-field-text-font-line-height: var(--body-font-line-height);
+    --newsletter-block-field-text-font-font-size: var(--normal-text-size);
+    --newsletter-block-field-text-font-font-size-value: var(--normal-text-size-value);
+    --course-item-side-nav-lesson-name-font-font-family: var(--body-font-font-family);
+    --course-item-side-nav-lesson-name-font-font-style: var(--body-font-font-style);
+    --course-item-side-nav-lesson-name-font-font-weight: var(--body-font-font-weight);
+    --course-item-side-nav-lesson-name-font-text-transform: var(--body-font-text-transform);
+    --course-item-side-nav-lesson-name-font-letter-spacing: var(--body-font-letter-spacing);
+    --course-item-side-nav-lesson-name-font-line-height: var(--body-font-line-height);
+    --course-item-side-nav-lesson-name-font-font-size: 1rem;
+    --course-item-side-nav-lesson-name-font-font-size-value: 1;
+    --course-list-course-item-lesson-meta-font-font-family: var(--meta-font-font-family);
+    --course-list-course-item-lesson-meta-font-font-style: var(--meta-font-font-style);
+    --course-list-course-item-lesson-meta-font-font-weight: var(--meta-font-font-weight);
+    --course-list-course-item-lesson-meta-font-text-transform: var(--meta-font-text-transform);
+    --course-list-course-item-lesson-meta-font-letter-spacing: var(--meta-font-letter-spacing);
+    --course-list-course-item-lesson-meta-font-line-height: var(--meta-font-line-height);
+    --course-list-course-item-lesson-meta-font-font-size: .75rem;
+    --course-list-course-item-lesson-meta-font-font-size-value: .75;
+    --video-basic-grid-list-category-nav-font-font-family: var(--body-font-font-family);
+    --video-basic-grid-list-category-nav-font-font-style: var(--body-font-font-style);
+    --video-basic-grid-list-category-nav-font-font-weight: var(--body-font-font-weight);
+    --video-basic-grid-list-category-nav-font-text-transform: var(--body-font-text-transform);
+    --video-basic-grid-list-category-nav-font-letter-spacing: var(--body-font-letter-spacing);
+    --video-basic-grid-list-category-nav-font-line-height: var(--body-font-line-height);
+    --video-basic-grid-list-category-nav-font-font-size: var(--normal-text-size);
+    --video-basic-grid-list-category-nav-font-font-size-value: var(--normal-text-size-value);
+    --blog-basic-grid-list-title-font-font-family: var(--heading-font-font-family);
+    --blog-basic-grid-list-title-font-font-style: var(--heading-font-font-style);
+    --blog-basic-grid-list-title-font-font-weight: var(--heading-font-font-weight);
+    --blog-basic-grid-list-title-font-text-transform: var(--heading-font-text-transform);
+    --blog-basic-grid-list-title-font-letter-spacing: var(--heading-font-letter-spacing);
+    --blog-basic-grid-list-title-font-line-height: var(--heading-font-line-height);
+    --blog-basic-grid-list-title-font-font-size: var(--heading-3-size);
+    --blog-basic-grid-list-title-font-font-size-value: var(--heading-3-size-value);
+    --blog-basic-grid-list-meta-font-font-family: var(--meta-font-font-family);
+    --blog-basic-grid-list-meta-font-font-style: var(--meta-font-font-style);
+    --blog-basic-grid-list-meta-font-font-weight: var(--meta-font-font-weight);
+    --blog-basic-grid-list-meta-font-text-transform: var(--meta-font-text-transform);
+    --blog-basic-grid-list-meta-font-letter-spacing: var(--meta-font-letter-spacing);
+    --blog-basic-grid-list-meta-font-line-height: var(--meta-font-line-height);
+    --blog-basic-grid-list-meta-font-font-size: var(--normal-meta-size);
+    --blog-basic-grid-list-meta-font-font-size-value: var(--normal-meta-size-value);
+    --form-block-input-text-font-font-family: var(--body-font-font-family);
+    --form-block-input-text-font-font-style: var(--body-font-font-style);
+    --form-block-input-text-font-font-weight: var(--body-font-font-weight);
+    --form-block-input-text-font-text-transform: var(--body-font-text-transform);
+    --form-block-input-text-font-letter-spacing: var(--body-font-letter-spacing);
+    --form-block-input-text-font-line-height: var(--body-font-line-height);
+    --form-block-input-text-font-font-size: var(--normal-text-size);
+    --form-block-input-text-font-font-size-value: var(--normal-text-size-value);
+    --course-list-course-item-lesson-excerpt-font-font-family: var(--body-font-font-family);
+    --course-list-course-item-lesson-excerpt-font-font-style: var(--body-font-font-style);
+    --course-list-course-item-lesson-excerpt-font-font-weight: var(--body-font-font-weight);
+    --course-list-course-item-lesson-excerpt-font-text-transform: var(--body-font-text-transform);
+    --course-list-course-item-lesson-excerpt-font-letter-spacing: var(--body-font-letter-spacing);
+    --course-list-course-item-lesson-excerpt-font-line-height: var(--body-font-line-height);
+    --course-list-course-item-lesson-excerpt-font-font-size: .875rem;
+    --course-list-course-item-lesson-excerpt-font-font-size-value: .875;
+    --header-button-font-font-family: Roboto;
+    --header-button-font-font-style: normal;
+    --header-button-font-font-weight: 500;
+    --header-button-font-text-transform: none;
+    --header-button-font-letter-spacing: .02em;
+    --header-button-font-line-height: 1.2em;
+    --header-button-font-font-size: .9rem;
+    --header-button-font-font-size-value: .9;
+    --blog-alternating-side-by-side-list-excerpt-font-font-family: var(--body-font-font-family);
+    --blog-alternating-side-by-side-list-excerpt-font-font-style: var(--body-font-font-style);
+    --blog-alternating-side-by-side-list-excerpt-font-font-weight: var(--body-font-font-weight);
+    --blog-alternating-side-by-side-list-excerpt-font-text-transform: var(--body-font-text-transform);
+    --blog-alternating-side-by-side-list-excerpt-font-letter-spacing: var(--body-font-letter-spacing);
+    --blog-alternating-side-by-side-list-excerpt-font-line-height: var(--body-font-line-height);
+    --blog-alternating-side-by-side-list-excerpt-font-font-size: var(--normal-text-size);
+    --blog-alternating-side-by-side-list-excerpt-font-font-size-value: var(--normal-text-size-value);
+    --product-basic-item-title-font-font-family: var(--heading-font-font-family);
+    --product-basic-item-title-font-font-style: var(--heading-font-font-style);
+    --product-basic-item-title-font-font-weight: var(--heading-font-font-weight);
+    --product-basic-item-title-font-text-transform: var(--heading-font-text-transform);
+    --product-basic-item-title-font-letter-spacing: var(--heading-font-letter-spacing);
+    --product-basic-item-title-font-line-height: var(--heading-font-line-height);
+    --product-basic-item-title-font-font-size: var(--heading-2-size);
+    --product-basic-item-title-font-font-size-value: var(--heading-2-size-value);
+    --menu-block-title-font-font-family: var(--heading-font-font-family);
+    --menu-block-title-font-font-style: var(--heading-font-font-style);
+    --menu-block-title-font-font-weight: var(--heading-font-font-weight);
+    --menu-block-title-font-text-transform: var(--heading-font-text-transform);
+    --menu-block-title-font-letter-spacing: var(--heading-font-letter-spacing);
+    --menu-block-title-font-line-height: var(--heading-font-line-height);
+    --menu-block-title-font-font-size: var(--heading-3-size);
+    --menu-block-title-font-font-size-value: var(--heading-3-size-value);
+    --form-block-caption-text-font-font-family: var(--body-font-font-family);
+    --form-block-caption-text-font-font-style: var(--body-font-font-style);
+    --form-block-caption-text-font-font-weight: var(--body-font-font-weight);
+    --form-block-caption-text-font-text-transform: var(--body-font-text-transform);
+    --form-block-caption-text-font-letter-spacing: var(--body-font-letter-spacing);
+    --form-block-caption-text-font-line-height: var(--body-font-line-height);
+    --form-block-caption-text-font-font-size: var(--small-text-size);
+    --form-block-caption-text-font-font-size-value: var(--small-text-size-value);
+    --blog-alternating-side-by-side-list-title-font-font-family: var(--heading-font-font-family);
+    --blog-alternating-side-by-side-list-title-font-font-style: var(--heading-font-font-style);
+    --blog-alternating-side-by-side-list-title-font-font-weight: var(--heading-font-font-weight);
+    --blog-alternating-side-by-side-list-title-font-text-transform: var(--heading-font-text-transform);
+    --blog-alternating-side-by-side-list-title-font-letter-spacing: var(--heading-font-letter-spacing);
+    --blog-alternating-side-by-side-list-title-font-line-height: var(--heading-font-line-height);
+    --blog-alternating-side-by-side-list-title-font-font-size: var(--heading-2-size);
+    --blog-alternating-side-by-side-list-title-font-font-size-value: var(--heading-2-size-value);
+    --portfolio-item-pagination-font-font-family: var(--heading-font-font-family);
+    --portfolio-item-pagination-font-font-style: var(--heading-font-font-style);
+    --portfolio-item-pagination-font-font-weight: var(--heading-font-font-weight);
+    --portfolio-item-pagination-font-text-transform: var(--heading-font-text-transform);
+    --portfolio-item-pagination-font-letter-spacing: var(--heading-font-letter-spacing);
+    --portfolio-item-pagination-font-line-height: var(--heading-font-line-height);
+    --portfolio-item-pagination-font-font-size: var(--heading-3-size);
+    --portfolio-item-pagination-font-font-size-value: var(--heading-3-size-value);
+    --blog-grid-masonry-list-meta-font-font-family: var(--meta-font-font-family);
+    --blog-grid-masonry-list-meta-font-font-style: var(--meta-font-font-style);
+    --blog-grid-masonry-list-meta-font-font-weight: var(--meta-font-font-weight);
+    --blog-grid-masonry-list-meta-font-text-transform: var(--meta-font-text-transform);
+    --blog-grid-masonry-list-meta-font-letter-spacing: var(--meta-font-letter-spacing);
+    --blog-grid-masonry-list-meta-font-line-height: var(--meta-font-line-height);
+    --blog-grid-masonry-list-meta-font-font-size: var(--normal-meta-size);
+    --blog-grid-masonry-list-meta-font-font-size-value: var(--normal-meta-size-value);
+    --blog-item-meta-font-font-family: var(--meta-font-font-family);
+    --blog-item-meta-font-font-style: var(--meta-font-font-style);
+    --blog-item-meta-font-font-weight: var(--meta-font-font-weight);
+    --blog-item-meta-font-text-transform: var(--meta-font-text-transform);
+    --blog-item-meta-font-letter-spacing: var(--meta-font-letter-spacing);
+    --blog-item-meta-font-line-height: var(--meta-font-line-height);
+    --blog-item-meta-font-font-size: var(--normal-meta-size);
+    --blog-item-meta-font-font-size-value: var(--normal-meta-size-value);
+    --blog-item-pagination-font-font-family: var(--heading-font-font-family);
+    --blog-item-pagination-font-font-style: var(--heading-font-font-style);
+    --blog-item-pagination-font-font-weight: var(--heading-font-font-weight);
+    --blog-item-pagination-font-text-transform: var(--heading-font-text-transform);
+    --blog-item-pagination-font-letter-spacing: var(--heading-font-letter-spacing);
+    --blog-item-pagination-font-line-height: var(--heading-font-line-height);
+    --blog-item-pagination-font-font-size: var(--heading-3-size);
+    --blog-item-pagination-font-font-size-value: var(--heading-3-size-value);
+    --product-block-title-font-font-family: var(--body-font-font-family);
+    --product-block-title-font-font-style: var(--body-font-font-style);
+    --product-block-title-font-font-weight: var(--body-font-font-weight);
+    --product-block-title-font-text-transform: var(--body-font-text-transform);
+    --product-block-title-font-letter-spacing: var(--body-font-letter-spacing);
+    --product-block-title-font-line-height: var(--body-font-line-height);
+    --product-block-title-font-font-size: 1.3rem;
+    --product-block-title-font-font-size-value: 1.3;
+    --menu-block-nav-font-font-family: var(--meta-font-font-family);
+    --menu-block-nav-font-font-style: var(--meta-font-font-style);
+    --menu-block-nav-font-font-weight: var(--meta-font-font-weight);
+    --menu-block-nav-font-text-transform: var(--meta-font-text-transform);
+    --menu-block-nav-font-letter-spacing: var(--meta-font-letter-spacing);
+    --menu-block-nav-font-line-height: var(--meta-font-line-height);
+    --menu-block-nav-font-font-size: var(--normal-meta-size);
+    --menu-block-nav-font-font-size-value: var(--normal-meta-size-value);
+    --video-item-pagination-font-font-family: var(--heading-font-font-family);
+    --video-item-pagination-font-font-style: var(--heading-font-font-style);
+    --video-item-pagination-font-font-weight: var(--heading-font-font-weight);
+    --video-item-pagination-font-text-transform: var(--heading-font-text-transform);
+    --video-item-pagination-font-letter-spacing: var(--heading-font-letter-spacing);
+    --video-item-pagination-font-line-height: var(--heading-font-line-height);
+    --video-item-pagination-font-font-size: var(--heading-3-size);
+    --video-item-pagination-font-font-size-value: var(--heading-3-size-value);
+    --product-grid-text-below-title-font-font-family: var(--heading-font-font-family);
+    --product-grid-text-below-title-font-font-style: var(--heading-font-font-style);
+    --product-grid-text-below-title-font-font-weight: var(--heading-font-font-weight);
+    --product-grid-text-below-title-font-text-transform: var(--heading-font-text-transform);
+    --product-grid-text-below-title-font-letter-spacing: var(--heading-font-letter-spacing);
+    --product-grid-text-below-title-font-line-height: var(--heading-font-line-height);
+    --product-grid-text-below-title-font-font-size: var(--heading-4-size);
+    --product-grid-text-below-title-font-font-size-value: var(--heading-4-size-value);
+    --product-basic-item-scarcity-font-font-family: var(--meta-font-font-family);
+    --product-basic-item-scarcity-font-font-style: var(--meta-font-font-style);
+    --product-basic-item-scarcity-font-font-weight: var(--meta-font-font-weight);
+    --product-basic-item-scarcity-font-text-transform: var(--meta-font-text-transform);
+    --product-basic-item-scarcity-font-letter-spacing: var(--meta-font-letter-spacing);
+    --product-basic-item-scarcity-font-line-height: var(--meta-font-line-height);
+    --product-basic-item-scarcity-font-font-size: var(--normal-meta-size);
+    --product-basic-item-scarcity-font-font-size-value: var(--normal-meta-size-value);
+    --form-block-placeholder-text-font-font-family: var(--body-font-font-family);
+    --form-block-placeholder-text-font-font-style: var(--body-font-font-style);
+    --form-block-placeholder-text-font-font-weight: var(--body-font-font-weight);
+    --form-block-placeholder-text-font-text-transform: var(--body-font-text-transform);
+    --form-block-placeholder-text-font-letter-spacing: var(--body-font-letter-spacing);
+    --form-block-placeholder-text-font-line-height: var(--body-font-line-height);
+    --form-block-placeholder-text-font-font-size: var(--small-text-size);
+    --form-block-placeholder-text-font-font-size-value: var(--small-text-size-value);
+    --video-item-title-font-font-family: var(--heading-font-font-family);
+    --video-item-title-font-font-style: var(--heading-font-font-style);
+    --video-item-title-font-font-weight: var(--heading-font-font-weight);
+    --video-item-title-font-text-transform: var(--heading-font-text-transform);
+    --video-item-title-font-letter-spacing: var(--heading-font-letter-spacing);
+    --video-item-title-font-line-height: var(--heading-font-line-height);
+    --video-item-title-font-font-size: var(--heading-2-size);
+    --video-item-title-font-font-size-value: var(--heading-2-size-value);
+    --blog-side-by-side-list-excerpt-font-font-family: var(--body-font-font-family);
+    --blog-side-by-side-list-excerpt-font-font-style: var(--body-font-font-style);
+    --blog-side-by-side-list-excerpt-font-font-weight: var(--body-font-font-weight);
+    --blog-side-by-side-list-excerpt-font-text-transform: var(--body-font-text-transform);
+    --blog-side-by-side-list-excerpt-font-letter-spacing: var(--body-font-letter-spacing);
+    --blog-side-by-side-list-excerpt-font-line-height: var(--body-font-line-height);
+    --blog-side-by-side-list-excerpt-font-font-size: var(--normal-text-size);
+    --blog-side-by-side-list-excerpt-font-font-size-value: var(--normal-text-size-value);
+    --product-grid-text-below-scarcity-font-font-family: var(--meta-font-font-family);
+    --product-grid-text-below-scarcity-font-font-style: var(--meta-font-font-style);
+    --product-grid-text-below-scarcity-font-font-weight: var(--meta-font-font-weight);
+    --product-grid-text-below-scarcity-font-text-transform: var(--meta-font-text-transform);
+    --product-grid-text-below-scarcity-font-letter-spacing: var(--meta-font-letter-spacing);
+    --product-grid-text-below-scarcity-font-line-height: var(--meta-font-line-height);
+    --product-grid-text-below-scarcity-font-font-size: var(--normal-meta-size);
+    --product-grid-text-below-scarcity-font-font-size-value: var(--normal-meta-size-value);
+    --video-item-description-font-font-family: var(--body-font-font-family);
+    --video-item-description-font-font-style: var(--body-font-font-style);
+    --video-item-description-font-font-weight: var(--body-font-font-weight);
+    --video-item-description-font-text-transform: var(--body-font-text-transform);
+    --video-item-description-font-letter-spacing: var(--body-font-letter-spacing);
+    --video-item-description-font-line-height: var(--body-font-line-height);
+    --video-item-description-font-font-size: var(--normal-text-size);
+    --video-item-description-font-font-size-value: var(--normal-text-size-value);
+    --product-grid-text-below-status-font-font-family: var(--meta-font-font-family);
+    --product-grid-text-below-status-font-font-style: var(--meta-font-font-style);
+    --product-grid-text-below-status-font-font-weight: var(--meta-font-font-weight);
+    --product-grid-text-below-status-font-text-transform: var(--meta-font-text-transform);
+    --product-grid-text-below-status-font-letter-spacing: var(--meta-font-letter-spacing);
+    --product-grid-text-below-status-font-line-height: var(--meta-font-line-height);
+    --product-grid-text-below-status-font-font-size: var(--normal-meta-size);
+    --product-grid-text-below-status-font-font-size-value: var(--normal-meta-size-value);
+    --product-basic-item-variant-fields-font-font-family: var(--meta-font-font-family);
+    --product-basic-item-variant-fields-font-font-style: var(--meta-font-font-style);
+    --product-basic-item-variant-fields-font-font-weight: var(--meta-font-font-weight);
+    --product-basic-item-variant-fields-font-text-transform: var(--meta-font-text-transform);
+    --product-basic-item-variant-fields-font-letter-spacing: var(--meta-font-letter-spacing);
+    --product-basic-item-variant-fields-font-line-height: var(--meta-font-line-height);
+    --product-basic-item-variant-fields-font-font-size: var(--normal-meta-size);
+    --product-basic-item-variant-fields-font-font-size-value: var(--normal-meta-size-value);
+    --blog-basic-grid-list-excerpt-font-font-family: var(--body-font-font-family);
+    --blog-basic-grid-list-excerpt-font-font-style: var(--body-font-font-style);
+    --blog-basic-grid-list-excerpt-font-font-weight: var(--body-font-font-weight);
+    --blog-basic-grid-list-excerpt-font-text-transform: var(--body-font-text-transform);
+    --blog-basic-grid-list-excerpt-font-letter-spacing: var(--body-font-letter-spacing);
+    --blog-basic-grid-list-excerpt-font-line-height: var(--body-font-line-height);
+    --blog-basic-grid-list-excerpt-font-font-size: var(--small-text-size);
+    --blog-basic-grid-list-excerpt-font-font-size-value: var(--small-text-size-value);
+    --events-item-pagination-font-font-family: var(--heading-font-font-family);
+    --events-item-pagination-font-font-style: var(--heading-font-font-style);
+    --events-item-pagination-font-font-weight: var(--heading-font-font-weight);
+    --events-item-pagination-font-text-transform: var(--heading-font-text-transform);
+    --events-item-pagination-font-letter-spacing: var(--heading-font-letter-spacing);
+    --events-item-pagination-font-line-height: var(--heading-font-line-height);
+    --events-item-pagination-font-font-size: var(--heading-3-size);
+    --events-item-pagination-font-font-size-value: var(--heading-3-size-value);
+    --site-navigation-font-font-family: var(--body-font-font-family);
+    --site-navigation-font-font-style: var(--body-font-font-style);
+    --site-navigation-font-font-weight: var(--body-font-font-weight);
+    --site-navigation-font-text-transform: var(--body-font-text-transform);
+    --site-navigation-font-letter-spacing: var(--body-font-letter-spacing);
+    --site-navigation-font-line-height: var(--body-font-line-height);
+    --site-navigation-font-font-size: var(--normal-text-size);
+    --site-navigation-font-font-size-value: var(--normal-text-size-value);
+    --form-block-description-text-font-font-family: var(--body-font-font-family);
+    --form-block-description-text-font-font-style: var(--body-font-font-style);
+    --form-block-description-text-font-font-weight: var(--body-font-font-weight);
+    --form-block-description-text-font-text-transform: var(--body-font-text-transform);
+    --form-block-description-text-font-letter-spacing: var(--body-font-letter-spacing);
+    --form-block-description-text-font-line-height: var(--body-font-line-height);
+    --form-block-description-text-font-font-size: var(--small-text-size);
+    --form-block-description-text-font-font-size-value: var(--small-text-size-value);
+    --blog-alternating-side-by-side-list-meta-font-font-family: var(--meta-font-font-family);
+    --blog-alternating-side-by-side-list-meta-font-font-style: var(--meta-font-font-style);
+    --blog-alternating-side-by-side-list-meta-font-font-weight: var(--meta-font-font-weight);
+    --blog-alternating-side-by-side-list-meta-font-text-transform: var(--meta-font-text-transform);
+    --blog-alternating-side-by-side-list-meta-font-letter-spacing: var(--meta-font-letter-spacing);
+    --blog-alternating-side-by-side-list-meta-font-line-height: var(--meta-font-line-height);
+    --blog-alternating-side-by-side-list-meta-font-font-size: var(--normal-meta-size);
+    --blog-alternating-side-by-side-list-meta-font-font-size-value: var(--normal-meta-size-value);
+    --product-block-price-font-font-family: var(--body-font-font-family);
+    --product-block-price-font-font-style: var(--body-font-font-style);
+    --product-block-price-font-font-weight: var(--body-font-font-weight);
+    --product-block-price-font-text-transform: var(--body-font-text-transform);
+    --product-block-price-font-letter-spacing: var(--body-font-letter-spacing);
+    --product-block-price-font-line-height: var(--body-font-line-height);
+    --product-block-price-font-font-size: 1.1rem;
+    --product-block-price-font-font-size-value: 1.1;
+    --tertiary-button-font-font-family: Roboto;
+    --tertiary-button-font-font-style: normal;
+    --tertiary-button-font-font-weight: 500;
+    --tertiary-button-font-text-transform: none;
+    --tertiary-button-font-letter-spacing: .02em;
+    --tertiary-button-font-line-height: 1.2em;
+    --tertiary-button-font-font-size: .9rem;
+    --tertiary-button-font-font-size-value: .9;
+    --content-link-block-title-font-font-family: var(--body-font-font-family);
+    --content-link-block-title-font-font-style: var(--body-font-font-style);
+    --content-link-block-title-font-font-weight: var(--body-font-font-weight);
+    --content-link-block-title-font-text-transform: var(--body-font-text-transform);
+    --content-link-block-title-font-letter-spacing: var(--body-font-letter-spacing);
+    --content-link-block-title-font-line-height: var(--body-font-line-height);
+    --content-link-block-title-font-font-size: var(--normal-text-size);
+    --content-link-block-title-font-font-size-value: var(--normal-text-size-value);
+    --product-block-description-font-font-family: var(--body-font-font-family);
+    --product-block-description-font-font-style: var(--body-font-font-style);
+    --product-block-description-font-font-weight: var(--body-font-font-weight);
+    --product-block-description-font-text-transform: var(--body-font-text-transform);
+    --product-block-description-font-letter-spacing: var(--body-font-letter-spacing);
+    --product-block-description-font-line-height: var(--body-font-line-height);
+    --product-block-description-font-font-size: var(--normal-text-size);
+    --product-block-description-font-font-size-value: var(--normal-text-size-value);
+    --mobile-site-title-font-font-family: var(--heading-font-font-family);
+    --mobile-site-title-font-font-style: var(--heading-font-font-style);
+    --mobile-site-title-font-font-weight: var(--heading-font-font-weight);
+    --mobile-site-title-font-text-transform: var(--heading-font-text-transform);
+    --mobile-site-title-font-letter-spacing: var(--heading-font-letter-spacing);
+    --mobile-site-title-font-line-height: var(--heading-font-line-height);
+    --mobile-site-title-font-font-size: 2rem;
+    --mobile-site-title-font-font-size-value: 2;
+    --cookie-banner-disclaimer-font-font-family: var(--body-font-font-family);
+    --cookie-banner-disclaimer-font-font-style: var(--body-font-font-style);
+    --cookie-banner-disclaimer-font-font-weight: var(--body-font-font-weight);
+    --cookie-banner-disclaimer-font-text-transform: var(--body-font-text-transform);
+    --cookie-banner-disclaimer-font-letter-spacing: var(--body-font-letter-spacing);
+    --cookie-banner-disclaimer-font-line-height: var(--body-font-line-height);
+    --cookie-banner-disclaimer-font-font-size: .8rem;
+    --cookie-banner-disclaimer-font-font-size-value: .8;
+    --product-grid-text-below-price-font-font-family: var(--meta-font-font-family);
+    --product-grid-text-below-price-font-font-style: var(--meta-font-font-style);
+    --product-grid-text-below-price-font-font-weight: var(--meta-font-font-weight);
+    --product-grid-text-below-price-font-text-transform: var(--meta-font-text-transform);
+    --product-grid-text-below-price-font-letter-spacing: var(--meta-font-letter-spacing);
+    --product-grid-text-below-price-font-line-height: var(--meta-font-line-height);
+    --product-grid-text-below-price-font-font-size: var(--normal-meta-size);
+    --product-grid-text-below-price-font-font-size-value: var(--normal-meta-size-value);
+    --blog-single-column-list-title-font-font-family: var(--heading-font-font-family);
+    --blog-single-column-list-title-font-font-style: var(--heading-font-font-style);
+    --blog-single-column-list-title-font-font-weight: var(--heading-font-font-weight);
+    --blog-single-column-list-title-font-text-transform: var(--heading-font-text-transform);
+    --blog-single-column-list-title-font-letter-spacing: var(--heading-font-letter-spacing);
+    --blog-single-column-list-title-font-line-height: var(--heading-font-line-height);
+    --blog-single-column-list-title-font-font-size: var(--heading-1-size);
+    --blog-single-column-list-title-font-font-size-value: var(--heading-1-size-value);
+    --video-basic-grid-list-meta-font-font-family: var(--meta-font-font-family);
+    --video-basic-grid-list-meta-font-font-style: var(--meta-font-font-style);
+    --video-basic-grid-list-meta-font-font-weight: var(--meta-font-font-weight);
+    --video-basic-grid-list-meta-font-text-transform: var(--meta-font-text-transform);
+    --video-basic-grid-list-meta-font-letter-spacing: var(--meta-font-letter-spacing);
+    --video-basic-grid-list-meta-font-line-height: var(--meta-font-line-height);
+    --video-basic-grid-list-meta-font-font-size: var(--normal-meta-size);
+    --video-basic-grid-list-meta-font-font-size-value: var(--normal-meta-size-value);
+    --course-list-course-name-font-font-family: var(--heading-font-font-family);
+    --course-list-course-name-font-font-style: var(--heading-font-font-style);
+    --course-list-course-name-font-font-weight: var(--heading-font-font-weight);
+    --course-list-course-name-font-text-transform: var(--heading-font-text-transform);
+    --course-list-course-name-font-letter-spacing: var(--heading-font-letter-spacing);
+    --course-list-course-name-font-line-height: var(--heading-font-line-height);
+    --course-list-course-name-font-font-size: var(--heading-1-size);
+    --course-list-course-name-font-font-size-value: var(--heading-1-size-value);
+    --menu-block-item-title-font-font-family: var(--heading-font-font-family);
+    --menu-block-item-title-font-font-style: var(--heading-font-font-style);
+    --menu-block-item-title-font-font-weight: var(--heading-font-font-weight);
+    --menu-block-item-title-font-text-transform: var(--heading-font-text-transform);
+    --menu-block-item-title-font-letter-spacing: var(--heading-font-letter-spacing);
+    --menu-block-item-title-font-line-height: var(--heading-font-line-height);
+    --menu-block-item-title-font-font-size: var(--heading-4-size);
+    --menu-block-item-title-font-font-size-value: var(--heading-4-size-value);
+    --course-list-grid-layout-course-item-meta-font-font-family: var(--meta-font-font-family);
+    --course-list-grid-layout-course-item-meta-font-font-style: var(--meta-font-font-style);
+    --course-list-grid-layout-course-item-meta-font-font-weight: var(--meta-font-font-weight);
+    --course-list-grid-layout-course-item-meta-font-text-transform: var(--meta-font-text-transform);
+    --course-list-grid-layout-course-item-meta-font-letter-spacing: var(--meta-font-letter-spacing);
+    --course-list-grid-layout-course-item-meta-font-line-height: var(--meta-font-line-height);
+    --course-list-grid-layout-course-item-meta-font-font-size: .75rem;
+    --course-list-grid-layout-course-item-meta-font-font-size-value: .75;
+    --blog-item-author-profile-font-font-family: var(--body-font-font-family);
+    --blog-item-author-profile-font-font-style: var(--body-font-font-style);
+    --blog-item-author-profile-font-font-weight: var(--body-font-font-weight);
+    --blog-item-author-profile-font-text-transform: var(--body-font-text-transform);
+    --blog-item-author-profile-font-letter-spacing: var(--body-font-letter-spacing);
+    --blog-item-author-profile-font-line-height: var(--body-font-line-height);
+    --blog-item-author-profile-font-font-size: var(--small-text-size);
+    --blog-item-author-profile-font-font-size-value: var(--small-text-size-value);
+    --course-list-grid-layout-course-item-excerpt-font-font-family: var(--body-font-font-family);
+    --course-list-grid-layout-course-item-excerpt-font-font-style: var(--body-font-font-style);
+    --course-list-grid-layout-course-item-excerpt-font-font-weight: var(--body-font-font-weight);
+    --course-list-grid-layout-course-item-excerpt-font-text-transform: var(--body-font-text-transform);
+    --course-list-grid-layout-course-item-excerpt-font-letter-spacing: var(--body-font-letter-spacing);
+    --course-list-grid-layout-course-item-excerpt-font-line-height: var(--body-font-line-height);
+    --course-list-grid-layout-course-item-excerpt-font-font-size: .875rem;
+    --course-list-grid-layout-course-item-excerpt-font-font-size-value: .875;
+    --portfolio-hover-static-title-font-font-family: var(--heading-font-font-family);
+    --portfolio-hover-static-title-font-font-style: var(--heading-font-font-style);
+    --portfolio-hover-static-title-font-font-weight: var(--heading-font-font-weight);
+    --portfolio-hover-static-title-font-text-transform: var(--heading-font-text-transform);
+    --portfolio-hover-static-title-font-letter-spacing: var(--heading-font-letter-spacing);
+    --portfolio-hover-static-title-font-line-height: var(--heading-font-line-height);
+    --portfolio-hover-static-title-font-font-size: var(--heading-1-size);
+    --portfolio-hover-static-title-font-font-size-value: var(--heading-1-size-value);
+    --blog-side-by-side-list-title-font-font-family: var(--heading-font-font-family);
+    --blog-side-by-side-list-title-font-font-style: var(--heading-font-font-style);
+    --blog-side-by-side-list-title-font-font-weight: var(--heading-font-font-weight);
+    --blog-side-by-side-list-title-font-text-transform: var(--heading-font-text-transform);
+    --blog-side-by-side-list-title-font-letter-spacing: var(--heading-font-letter-spacing);
+    --blog-side-by-side-list-title-font-line-height: var(--heading-font-line-height);
+    --blog-side-by-side-list-title-font-font-size: var(--heading-2-size);
+    --blog-side-by-side-list-title-font-font-size-value: var(--heading-2-size-value);
+    --form-block-title-text-font-font-family: var(--body-font-font-family);
+    --form-block-title-text-font-font-style: var(--body-font-font-style);
+    --form-block-title-text-font-font-weight: var(--body-font-font-weight);
+    --form-block-title-text-font-text-transform: var(--body-font-text-transform);
+    --form-block-title-text-font-letter-spacing: var(--body-font-letter-spacing);
+    --form-block-title-text-font-line-height: var(--body-font-line-height);
+    --form-block-title-text-font-font-size: var(--normal-text-size);
+    --form-block-title-text-font-font-size-value: var(--normal-text-size-value);
+    --blog-side-by-side-list-meta-font-font-family: var(--meta-font-font-family);
+    --blog-side-by-side-list-meta-font-font-style: var(--meta-font-font-style);
+    --blog-side-by-side-list-meta-font-font-weight: var(--meta-font-font-weight);
+    --blog-side-by-side-list-meta-font-text-transform: var(--meta-font-text-transform);
+    --blog-side-by-side-list-meta-font-letter-spacing: var(--meta-font-letter-spacing);
+    --blog-side-by-side-list-meta-font-line-height: var(--meta-font-line-height);
+    --blog-side-by-side-list-meta-font-font-size: var(--normal-meta-size);
+    --blog-side-by-side-list-meta-font-font-size-value: var(--normal-meta-size-value);
+    --blog-single-column-list-excerpt-font-font-family: var(--body-font-font-family);
+    --blog-single-column-list-excerpt-font-font-style: var(--body-font-font-style);
+    --blog-single-column-list-excerpt-font-font-weight: var(--body-font-font-weight);
+    --blog-single-column-list-excerpt-font-text-transform: var(--body-font-text-transform);
+    --blog-single-column-list-excerpt-font-letter-spacing: var(--body-font-letter-spacing);
+    --blog-single-column-list-excerpt-font-line-height: var(--body-font-line-height);
+    --blog-single-column-list-excerpt-font-font-size: var(--normal-text-size);
+    --blog-single-column-list-excerpt-font-font-size-value: var(--normal-text-size-value);
+    --course-item-side-nav-lesson-meta-font-font-family: var(--meta-font-font-family);
+    --course-item-side-nav-lesson-meta-font-font-style: var(--meta-font-font-style);
+    --course-item-side-nav-lesson-meta-font-font-weight: var(--meta-font-font-weight);
+    --course-item-side-nav-lesson-meta-font-text-transform: var(--meta-font-text-transform);
+    --course-item-side-nav-lesson-meta-font-letter-spacing: var(--meta-font-letter-spacing);
+    --course-item-side-nav-lesson-meta-font-line-height: var(--meta-font-line-height);
+    --course-item-side-nav-lesson-meta-font-font-size: .8rem;
+    --course-item-side-nav-lesson-meta-font-font-size-value: .8;
+    --blog-item-title-font-font-family: var(--heading-font-font-family);
+    --blog-item-title-font-font-style: var(--heading-font-font-style);
+    --blog-item-title-font-font-weight: var(--heading-font-font-weight);
+    --blog-item-title-font-text-transform: var(--heading-font-text-transform);
+    --blog-item-title-font-letter-spacing: var(--heading-font-letter-spacing);
+    --blog-item-title-font-line-height: var(--heading-font-line-height);
+    --blog-item-title-font-font-size: var(--heading-1-size);
+    --blog-item-title-font-font-size-value: var(--heading-1-size-value);
+    --course-list-course-item-lesson-name-font-font-family: var(--body-font-font-family);
+    --course-list-course-item-lesson-name-font-font-style: var(--body-font-font-style);
+    --course-list-course-item-lesson-name-font-font-weight: var(--body-font-font-weight);
+    --course-list-course-item-lesson-name-font-text-transform: var(--body-font-text-transform);
+    --course-list-course-item-lesson-name-font-letter-spacing: var(--body-font-letter-spacing);
+    --course-list-course-item-lesson-name-font-line-height: var(--body-font-line-height);
+    --course-list-course-item-lesson-name-font-font-size: 1.125rem;
+    --course-list-course-item-lesson-name-font-font-size-value: 1.125;
+    --video-preview-badge-font-font-family: var(--body-font-font-family);
+    --video-preview-badge-font-font-style: var(--body-font-font-style);
+    --video-preview-badge-font-font-weight: var(--body-font-font-weight);
+    --video-preview-badge-font-text-transform: var(--body-font-text-transform);
+    --video-preview-badge-font-letter-spacing: var(--body-font-letter-spacing);
+    --video-preview-badge-font-line-height: var(--body-font-line-height);
+    --video-preview-badge-font-font-size: var(--normal-text-size);
+    --video-preview-badge-font-font-size-value: var(--normal-text-size-value);
+    --portfolio-grid-overlay-title-font-font-family: var(--heading-font-font-family);
+    --portfolio-grid-overlay-title-font-font-style: var(--heading-font-font-style);
+    --portfolio-grid-overlay-title-font-font-weight: var(--heading-font-font-weight);
+    --portfolio-grid-overlay-title-font-text-transform: var(--heading-font-text-transform);
+    --portfolio-grid-overlay-title-font-letter-spacing: var(--heading-font-letter-spacing);
+    --portfolio-grid-overlay-title-font-line-height: var(--heading-font-line-height);
+    --portfolio-grid-overlay-title-font-font-size: var(--heading-3-size);
+    --portfolio-grid-overlay-title-font-font-size-value: var(--heading-3-size-value);
+  /* … paste the rest of your variables here … */
+}
+
+/* 2) ————————————————————————————— Layout helper rules ————————————————————————————— */
+.sqs-layout:not(.sqs-editing) .sqs-row .sqs-block:not(.float):first-child {
+  padding-top: 0;
+}
+.sqs-layout:not(.sqs-editing) .sqs-row .sqs-block:not(.float):last-child {
+  padding-bottom: 0;
+}
+[class*=sqs-col] .sqs-block {
+  padding-left: 17px;
+  padding-right: 17px;
+}
+.sqs-block {
+  position: relative;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+.page-section {
+  color: var(--paragraphMediumColor);
+}
+
+/* 3) ————————————————————————————— Basic Reset ————————————————————————————— */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body / Fonts */
+/* 4) ————————————————————————————— Body & Typography ————————————————————————————— */
 body {
-  font-family: 'Work Sans', 'Roboto', sans-serif; /* Update with the target site's fonts */
-  color: #333; /* Update with the target site's text color */
-  background: #fff; /* Update with the target site's background color */
-  line-height: 1.6;
+  font-family: var(--body-font-font-family), sans-serif;
+  font-weight: var(--body-font-font-weight);
+  font-size: var(--normal-text-size);
+  line-height: var(--body-font-line-height);
+  letter-spacing: var(--body-font-letter-spacing);
+  background-color: var(--siteBackgroundColor);
+  color: var(--paragraphMediumColor);
 }
 
-/* Header */
+/* 5) ————————————————————————————— Header ————————————————————————————— */
 .site-header {
-  position: absolute; 
-  top: 0;
-  left: 0;
+  position: absolute;
+  top: 0; left: 0;
   width: 100%;
-  z-index: 999; /* ensures the header is on top of the hero */
-  background: transparent !important; /* keep it transparent to see hero behind */
+  z-index: 999;
+  background: transparent !important;
 }
-
 .header-inner {
-  max-width: 1200px;
+  max-width: var(--sqs-site-max-width);
   margin: 0 auto;
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-/* Logo */
 .header-title a {
+  font-family: var(--heading-font-font-family), sans-serif;
+  font-weight: var(--heading-font-font-weight);
+  font-size: var(--large-text-size);
+  letter-spacing: var(--heading-font-letter-spacing);
+  text-transform: var(--heading-font-text-transform);
+  color: var(--siteTitleColor);
   text-decoration: none;
-  /* A light bluish-gray color to match your screenshot text: */
-  color: #b2c7d9; 
-  font-weight: 300;  /* keep it light */
-  font-size: 2rem;   /* slightly larger for prominence */
-  letter-spacing: 0.1em; /* subtle spacing to mimic the style */
 }
 
-/* Desktop Nav */
+/* 6) ————————————————————————————— Desktop Nav ————————————————————————————— */
 .desktop-nav ul {
   list-style: none;
   display: flex;
   gap: 2rem;
 }
-
 .desktop-nav a {
+  font-family: var(--heading-font-font-family), sans-serif;
+  font-weight: var(--heading-font-font-weight);
+  font-size: var(--normal-text-size);
+  letter-spacing: var(--heading-font-letter-spacing);
+  text-transform: var(--heading-font-text-transform);
+  color: var(--siteTitleColor);
   text-decoration: none;
-  color: #b2c7d9;    /* same bluish-gray as the logo */
-  font-weight: 300;  /* light style */
-  font-size: 1rem;   /* slightly bigger than default */
-  letter-spacing: 0.05em;
 }
-
 .desktop-nav a:hover {
   text-decoration: underline;
 }
 
-/* CTA Button in Header */
+/* 7) ————————————————————————————— CTA Button ————————————————————————————— */
 .header-cta .cta-button {
-  background: #6b8fa7; /* or your desired bluish color from the screenshot */
-  color: #fff;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 3px;
-  font-weight: 400; /* Not too bold, to match the style */
+  background: hsla(var(--darkAccent-hsl),1);
+  color: var(--siteBackgroundColor);
+  padding: var(--primary-button-padding-y) var(--primary-button-padding-x);
+  border-radius: var(--primary-button-rounded-border-top-left-radius);
+  font-family: var(--body-font-font-family),sans-serif;
+  font-weight: var(--body-font-font-weight);
   letter-spacing: 0.05em;
+  text-decoration: none;
 }
 
-/* Hide hamburger and mobile nav by default on desktop */
+/* 8) ————————————————————————————— Hamburger & Mobile Nav ————————————————————————————— */
 .hamburger,
 .mobile-nav {
   display: none;
 }
-
-/* =========== MOBILE STYLES ========== */
 @media (max-width: 768px) {
-  /* Hide desktop nav; show hamburger */
-  .desktop-nav {
-    display: none;
-  }
+  .desktop-nav { display: none; }
   .hamburger {
     display: inline-block;
     background: none;
@@ -91,54 +1021,46 @@ body {
     cursor: pointer;
   }
   .hamburger .line {
-    display: block;
     width: 24px;
     height: 2px;
-    background: #ffffff; /* white lines */
-    margin: 5px 0;
-    transition: 0.4s;
+    background: var(--siteTitleColor);
+    margin: 6px 0;
+    transition: 0.3s;
   }
-
-  /* Mobile Nav (overlay style) */
   .mobile-nav {
-    display: block; /* or none, then use transforms to show/hide */
+    display: block;
     position: fixed;
-    top: 0; right: 0;
-    width: 100vw;
-    height: 100vh;
+    top:0; right:0;
+    width:100vw; height:100vh;
     background: rgba(0,0,0,0.9);
     transform: translateX(100%);
-    transition: transform 0.4s ease;
-    z-index: 9999; /* on top */
+    transition: transform .4s ease;
+    z-index: 999;
     padding: 2rem;
   }
-
-  /* If .open is added, nav slides in */
   .mobile-nav.open {
     transform: translateX(0);
   }
-
   .mobile-nav ul {
     list-style: none;
     margin-top: 3rem;
     text-align: center;
   }
   .mobile-nav li {
-    margin: 1rem 0;
+    margin: 1.5rem 0;
   }
   .mobile-nav a {
-    color: #ffffff;
+    font-family: var(--body-font-font-family), sans-serif;
+    font-weight: var(--body-font-font-weight);
+    font-size: var(--large-text-size);
+    color: var(--siteTitleColor);
     text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 300;
   }
 }
-/* ================================
-   5) Hero Section
-   ================================ */
+
+/* 9) ————————————————————————————— Hero Section ————————————————————————————— */
 .hero {
   position: relative;
-  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -147,130 +1069,88 @@ body {
   background-size: cover;
   background-position: center;
 }
-
-/* Large hero gets more vertical space */
-.hero-large {
-  min-height: 80vh;
-}
-
-/* Dark overlay to ensure text is readable */
+.hero-large { min-height: 80vh; }
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  inset: 0;
+  background: rgba(0,0,0,0.4);
 }
-
-/* 
-   The hero content sits above the overlay,
-   so we can read text easily
-*/
 .hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
-  padding: 2rem;
+  position: relative; z-index:1;
+  max-width:600px;
+  padding:2rem;
 }
-
 .hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  /* 
-     If you want the big hero text in the same bluish color, 
-     you can do color: #b2c7d9 
-     or keep it #fff 
-  */
-  color: #b2c7d9; 
+  font-family: var(--heading-font-font-family),sans-serif;
+  font-weight: var(--heading-font-font-weight);
+  font-size: var(--heading-1-size);
+  letter-spacing: var(--heading-font-letter-spacing);
+  color: var(--siteTitleColor);
+  margin-bottom:1rem;
 }
-
 .hero-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  background-color: #6b8fa7;
-  color: #fff;
-  padding: 0.75rem 1.25rem;
+  background: hsla(var(--darkAccent-hsl),1);
+  color: var(--siteBackgroundColor);
+  padding: .75rem 1.25rem;
+  border-radius:4px;
+  font-family: var(--body-font-font-family),sans-serif;
+  font-weight: var(--body-font-font-weight);
+  letter-spacing:0.05em;
   text-decoration: none;
-  border-radius: 4px;
-  font-weight: 400;
-  letter-spacing: 0.05em;
 }
 
-/* ================================
-   6) Section styling, etc.
-   ================================ */
+/* 10) ————————————————————————————— Sections ————————————————————————————— */
 .section-medium {
   padding: 3rem 1rem;
 }
-
 .section-inner {
-  max-width: 1200px;
+  max-width: var(--sqs-site-max-width);
   margin: 0 auto;
 }
-/* for the we manage assets on behald.. */
-   .section-inner h2 {
-     font-size: 2rem;
-     font-weight: 300;
-     color: #6b8fa7;
-     text-align: center;
-     margin-bottom: 2rem;
-   }
-
-/* For multi-column layout */
+.section-inner h2 {
+  font-family: var(--heading-font-font-family),sans-serif;
+  font-weight: var(--heading-font-font-weight);
+  font-size: var(--heading-2-size);
+  letter-spacing: var(--heading-font-letter-spacing);
+  color: hsla(var(--darkAccent-hsl),1);
+  text-align: center;
+  margin-bottom:2rem;
+}
 .two-columns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  display:flex; flex-wrap:wrap; gap:2rem;
 }
-
 .two-columns .column {
-  flex: 1 1 300px;
+  flex:1 1 300px;
 }
-
-/* If you want a slight color for sub-headings or paragraphs,
-   you can tweak them similarly */
-
- .two-columns h3 {
-    color: #6b8fa7;
-    font-weight: 300;
-   }
-
-/* Example: style for your sub-headings in the mid-sections */
 .section-inner h3 {
-  color: #6b8fa7;     /* a muted bluish color */
-  font-weight: 300;   /* keep it light */
-  font-size: 1.8rem;  /* bigger than default */
-  margin-bottom: 1rem;
-  letter-spacing: 0.05em;
+  font-family: var(--heading-font-font-family),sans-serif;
+  font-weight: var(--heading-font-font-weight);
+  font-size: var(--heading-3-size);
+  letter-spacing: var(--heading-font-letter-spacing);
+  color: hsla(var(--darkAccent-hsl),1);
+  margin-bottom:1rem;
 }
-
-/* If you also want to style the paragraphs under them: */
 .section-inner p {
-  color: #555;        /* a dark gray text */
-  font-size: 1rem;
-  line-height: 1.6;   /* comfortable spacing */
+  font-family: var(--body-font-font-family),sans-serif;
+  font-weight: var(--body-font-font-weight);
+  font-size: var(--normal-text-size);
+  line-height: var(--body-font-line-height);
+  color: var(--paragraphMediumColor);
 }
 
-/* Footer */
+/* 11) ————————————————————————————— Footer ————————————————————————————— */
 .site-footer {
-  background: #4A6275; /* pick a darker bluish shade */
-  color: #fff;         /* white text */
-  text-align: center;  /* center the text */
+  background: hsla(var(--darkAccent-hsl),1);
+  color: var(--siteTitleColor);
+  text-align: center;
   padding: 1.5rem 1rem;
 }
-
-/* If you use a .footer-inner container, ensure it’s centered as well */
 .footer-inner {
-  max-width: 1200px;
+  max-width: var(--sqs-site-max-width);
   margin: 0 auto;
 }
-
-/* Tweak the paragraphs if you want specific spacing or style */
 .site-footer p {
   margin: 0.5rem 0;
-  font-size: 1rem;     /* or any size you like */
+  font-family: var(--body-font-font-family),sans-serif;
+  font-size: var(--small-text-size);
 }
-
