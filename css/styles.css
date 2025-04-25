@@ -150,6 +150,8 @@ body {
   padding: 1rem;
   top: 100%;
   left: 0;
+  min-width: 180px;
+  border-radius: 4px;
 }
 
 .nav-folder:hover .folder-dropdown {
@@ -207,6 +209,22 @@ body {
   color: #6b8fa7;
   font-size: 1rem;
 }
+
+/* Show on hover for DESKTOP */
+@media (min-width: 769px) {
+  .nav-folder:hover .folder-dropdown {
+    display: block;
+  }
+}
+
+/* Always hidden initially for mobile */
+@media (max-width: 768px) {
+  .folder-dropdown {
+    position: static;
+    background: transparent;
+    padding: 0;
+    min-width: auto;
+  }
 /* 7) ————————————————————————————— CTA Button ————————————————————————————— */
 .header-cta .cta-button {
   background: hsla(var(--darkAccent-hsl),1);
