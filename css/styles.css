@@ -1,3 +1,38 @@
+:root {
+  /* Colors */
+  --paragraphMediumColor: #1a1a1a;
+  --siteTitleColor: #ffffff;
+  --siteBackgroundColor: #ffffff;
+  --darkAccent-hsl: 206, 16%, 35%;
+
+  /* Fonts */
+  --heading-font-font-family: 'Work Sans';
+  --heading-font-font-weight: 300;
+  --heading-font-letter-spacing: 0.16em;
+  --heading-font-text-transform: uppercase;
+  --heading-font-line-height: 1.4em;
+
+  --body-font-font-family: 'Roboto';
+  --body-font-font-weight: 300;
+  --body-font-letter-spacing: 0;
+  --body-font-line-height: 1.8em;
+
+  /* Font sizes */
+  --heading-1-size: 4rem;
+  --heading-2-size: 2.8rem;
+  --heading-3-size: 2rem;
+  --normal-text-size: 1rem;
+  --large-text-size: 1.25rem;
+  --small-text-size: 0.9rem;
+
+  /* Layout */
+  --sqs-site-max-width: 1200px;
+
+  /* Buttons */
+  --primary-button-padding-x: 2rem;
+  --primary-button-padding-y: 1rem;
+  --primary-button-rounded-border-top-left-radius: 6px;
+}
 
 
 /* 2) ————————————————————————————— Layout helper rules ————————————————————————————— */
@@ -181,18 +216,24 @@ body {
   background: rgba(0,0,0,0.4);
 }
 .hero-content {
-  position: relative; z-index:1;
-  max-width:600px;
-  padding:2rem;
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 100%; /* originally was 600px */
 }
+
 .hero-content h1 {
-  font-family: var(--heading-font-font-family),sans-serif;
-  font-weight: var(--heading-font-font-weight);
-  font-size: var(--heading-1-size);
-  letter-spacing: var(--heading-font-letter-spacing);
-  color: var(--siteTitleColor);
-  margin-bottom:1rem;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 4rem;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
+
 .hero-btn {
   background: hsla(var(--darkAccent-hsl),1);
   color: var(--siteBackgroundColor);
@@ -213,14 +254,17 @@ body {
   margin: 0 auto;
 }
 .section-inner h2 {
-  font-family: var(--heading-font-font-family),sans-serif;
-  font-weight: var(--heading-font-font-weight);
-  font-size: var(--heading-2-size);
-  letter-spacing: var(--heading-font-letter-spacing);
-  color: hsla(var(--darkAccent-hsl),1);
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  letter-spacing: 0.16em;
+  color: #2f4f60;
+  text-transform: uppercase;
   text-align: center;
-  margin-bottom:2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
 }
+
 .two-columns {
   display:flex; flex-wrap:wrap; gap:2rem;
 }
