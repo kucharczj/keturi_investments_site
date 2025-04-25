@@ -97,30 +97,45 @@
 
       <hr />
 
-      <h4>Connect with us</h4>
-      <p>We would be pleased to elaborate further on any of these options and discuss how KETURI may work for you and your family.</p>
+ <section class="section-medium contact-section">
+  <div class="section-inner">
+    <h3>CONNECT WITH US</h3>
+    <p>
+      We would be pleased to elaborate further on any of these options and discuss how KETURI may work for you and your family.
+    </p>
 
-      <!-- Contact Form -->
-      <form class="contact-form" action="#" method="POST">
-        <label for="firstName">Name *</label>
-        <div style="display:flex; gap:1rem;">
-          <input type="text" id="firstName" name="firstName" placeholder="First Name" required />
-          <input type="text" id="lastName" name="lastName" placeholder="Last Name" required />
+    <form class="contact-form">
+      <div class="form-group split">
+        <div class="field">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" required />
         </div>
+        <div class="field">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" required />
+        </div>
+      </div>
 
-        <label for="email">Email *</label>
+      <div class="form-group">
+        <label for="email">Email <span class="required">(required)</span></label>
         <input type="email" id="email" name="email" required />
+      </div>
 
-        <label for="phone">Phone *</label>
-        <input type="tel" id="phone" name="phone" placeholder="(###) ###-####" required />
+      <div class="form-group">
+        <label for="phone">Phone <span class="required">(required)</span></label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
 
-        <label for="message">Message *</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+      <div class="form-group">
+        <label for="message">Message <span class="required">(required)</span></label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
 
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  </section>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+ </section>
+
 
   <!-- Footer -->
   <footer class="site-footer">
