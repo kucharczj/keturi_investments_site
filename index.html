@@ -35,47 +35,43 @@
     </div>
 
       <!-- Desktop Nav -->
-    <nav class="desktop-nav">
-      <ul class="nav-right">
-        <li class="nav-folder">
-          <a href="#">About</a>
-          <ul class="folder-dropdown">
-            <li><a href="ourname.html">Our Name</a></li>
-            <li><a href="whatwedo.html">What We Do</a></li>
-          </ul>
-        </li>
-        <li><a href="ourphilosophy.html">Our Philosophy</a></li>
-        <li><a href="contactus.html" class="cta-button">Contact Us</a></li>
-      </ul>
-    </nav>
-
+      <nav class="desktop-nav">
+        <ul>
+          <li class="nav-folder">
+            <a href="#" class="folder-title">About</a>
+            <ul class="folder-dropdown">
+              <li><a href="ourname.html">Our Name</a></li>
+              <li><a href="whatwedo.html">What We Do</a></li>
+            </ul>
+          </li>
+          <li><a href="ourphilosophy.html">Our Philosophy</a></li>
+        </ul>
+      </nav>
 
     <!-- CTA Button -->
     <div class="header-cta">
       <a href="contactus.html" class="cta-button">Contact Us</a>
     </div>
-
-    <!-- Hamburger Button (for mobile only) -->
-    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
-      <span class="line top-bun"></span>
-      <span class="line patty"></span>
-      <span class="line bottom-bun"></span>
-    </button>
-
-      <!-- Mobile Nav Overlay -->
-      <nav id="mainNav" class="mobile-nav">
-        <ul>
-          <li>
-            <a href="#" id="aboutLink">About</a>
-            <div id="aboutOverlay" class="overlay-hidden">
-              <button id="backBtn">← Back</button>
-              <ul>
-                <li><a href="ourname.html">Our Name</a></li>
-                <li><a href="whatwedo.html">What We Do</a></li>
-              </ul>
-            </div>
-          </li>
+    
+    <!-- Hamburger for mobile -->
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+      
+      <!-- Mobile Nav -->
+      <nav class="mobile-nav" id="mobileNav">
+        <ul class="top-level">
+          <li class="has-submenu"><a href="#">About</a></li>
           <li><a href="ourphilosophy.html">Our Philosophy</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+      
+        <ul class="submenu" id="aboutSubmenu">
+          <li><a href="#" class="back">← Back</a></li>
+          <li><a href="ourname.html">Our Name</a></li>
+          <li><a href="whatwedo.html">What We Do</a></li>
         </ul>
       </nav>
     </div>
