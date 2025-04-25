@@ -17,71 +17,108 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,700&display=swap"
     rel="stylesheet"
   />
- </head> 
+
+  <!-- Your main stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Your JS -->
+  <script src="js/script.js" defer></script>
+</head>
 <body>
 
-  <!-- Header (same structure as your homepage) -->
+  <!-- Header / Navigation (same as index.html) -->
   <header class="site-header">
     <div class="header-inner">
-      <!-- Site Title / Logo -->
       <div class="header-title">
         <a href="index.html">KETURI Investment Management</a>
       </div>
-
-      <!-- Main Navigation -->
-      <nav class="header-nav">
+      <nav class="desktop-nav">
         <ul>
-          <!-- "About" folder -->
           <li class="nav-folder">
-            <a href="about.html" class="folder-title">About</a>
+            <a href="#" class="folder-title">About</a>
             <ul class="folder-dropdown">
               <li><a href="ourname.html">Our Name</a></li>
-              <li><a href="whatwedo.html" class="active-page">What We Do</a></li>
+              <li><a href="whatwedo.html" aria-current="page">What We Do</a></li>
             </ul>
           </li>
           <li><a href="ourphilosophy.html">Our Philosophy</a></li>
         </ul>
       </nav>
-
-      <!-- Contact CTA -->
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+        <span class="line top-bun"></span>
+        <span class="line patty"></span>
+        <span class="line bottom-bun"></span>
+      </button>
+      <nav id="mainNav" class="mobile-nav">
+        <ul>
+          <li>
+            <a href="#" id="aboutLink">About</a>
+            <div id="aboutOverlay" class="overlay-hidden">
+              <button id="backBtn">← Back</button>
+              <ul>
+                <li><a href="ourname.html">Our Name</a></li>
+                <li><a href="whatwedo.html">What We Do</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="ourphilosophy.html">Our Philosophy</a></li>
+          <li><a href="contactus.html" class="cta-button">Contact Us</a></li>
+        </ul>
+      </nav>
       <div class="header-cta">
         <a href="contactus.html" class="cta-button">Contact Us</a>
       </div>
     </div>
   </header>
 
-  <!-- Page Content -->
+  <!-- Hero Section -->
+  <section
+    class="hero hero-large"
+    style="background-image: url('https://images.squarespace-cdn.com/content/v1/5fb448c34758a50ced5b8b70/1651029297903-LAESIP4UU6OK0ABOYLHB/stone.jpg');"
+  >
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Distinctly Keturi</h1>
+    </div>
+  </section>
+
+  <!-- Main Content -->
   <section class="section-medium">
     <div class="section-inner">
-      <h1>What We Do</h1>
-
-      <!-- Placeholder summary referencing your homepage snippet -->
+      <h3>We provide perspective, ideas, and counsel in an honest, highly ethical and confidential approach.</h3>
       <p>
-        On the homepage, we mention: “We manage financial assets on behalf of you and your family for the long term.”  
-        Below is more detail about how we do that — from portfolio construction to day-to-day management.
+        At KETURI, we manage financial assets guided by our own developed philosophy and a discipline to execute toward our clients’ objectives. We want our clients to understand that our approach requires a long-term time frame—from your lifetime onward to future generations.
       </p>
 
-      <!-- Sample text: Replace with your real service details -->
-      <h2>Personalized Portfolio Strategy</h2>
+      <h3>We are available to our clients as a sounding board to facilitate life decisions.</h3>
       <p>
-        We begin every client engagement by understanding your goals, risk tolerance, and legacy aspirations.  
-        Whether you’re focused on real estate, stocks, or other alternative investments,  
-        our team tailors a plan that aligns with your long-term vision.
+        Our structure allows individual or family Limited Liability Corporations that qualify to be the investment vehicle, whereby the members appoint KETURI to manage selected assets.
       </p>
 
-      <h2>Ongoing Asset Management</h2>
-      <p>
-        Our commitment doesn’t end after initial setup. We continuously review market conditions,  
-        rebalance portfolios, and refine strategies to preserve wealth across generations.  
-        Staying proactive helps us navigate uncertain markets effectively.
-      </p>
+      <hr />
 
-      <h2>Family-Centric Approach</h2>
-      <p>
-        The hallmark of KETURI is our focus on family and legacy. Whether it’s educational planning,  
-        real estate investments, or philanthropic endeavors, we strive to build a sustainable future  
-        for you and the next generation.
-      </p>
+      <h4>Connect with us</h4>
+      <p>We would be pleased to elaborate further on any of these options and discuss how KETURI may work for you and your family.</p>
+
+      <!-- Contact Form -->
+      <form class="contact-form" action="#" method="POST">
+        <label for="firstName">Name *</label>
+        <div style="display:flex; gap:1rem;">
+          <input type="text" id="firstName" name="firstName" placeholder="First Name" required />
+          <input type="text" id="lastName" name="lastName" placeholder="Last Name" required />
+        </div>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone *</label>
+        <input type="tel" id="phone" name="phone" placeholder="(###) ###-####" required />
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
     </div>
   </section>
 
@@ -93,7 +130,5 @@
     </div>
   </footer>
 
-  <!-- Optional JavaScript for dynamic footer year -->
-  <script src="js/script.js" defer></script>
 </body>
 </html>
