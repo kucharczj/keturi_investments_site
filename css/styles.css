@@ -939,6 +939,15 @@
   box-sizing: border-box;
 }
 
+/* Global Header Styling */
+h1 {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;            /* Light weight */
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #ffffff;              /* White text */
+}
+
 /* 4) ————————————————————————————— Body & Typography ————————————————————————————— */
 body {
   font-family: var(--body-font-font-family), sans-serif;
