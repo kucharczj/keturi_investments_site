@@ -1,3 +1,43 @@
+:root {
+  /* Color palette from original site */
+  --siteTitleColor: #ffffff;
+  --paragraphMediumColor: #1a3c4d;
+  --siteBackgroundColor: #ffffff;
+  --darkAccent-hsl: 206, 16%, 40%;
+
+  /* Font sizes */
+  --normal-text-size: 1rem;
+  --large-text-size: 1.4rem;
+  --small-text-size: 0.9rem;
+
+  /* Heading font (hero, nav, etc.) */
+  --heading-font-font-family: 'Work Sans', sans-serif;
+  --heading-font-font-style: normal;
+  --heading-font-font-weight: 300;
+  --heading-font-text-transform: uppercase;
+  --heading-font-letter-spacing: 0.15em;
+  --heading-font-line-height: 1.4em;
+
+  --heading-1-size: 4rem;
+  --heading-2-size: 2.8rem;
+  --heading-3-size: 2.2rem;
+
+  /* Body font (paragraphs, buttons, etc.) */
+  --body-font-font-family: 'Roboto', sans-serif;
+  --body-font-font-style: normal;
+  --body-font-font-weight: 300;
+  --body-font-text-transform: none;
+  --body-font-letter-spacing: 0em;
+  --body-font-line-height: 1.8em;
+
+  /* Layout */
+  --sqs-site-max-width: 1200px;
+
+  /* Button padding */
+  --primary-button-padding-y: 0.75rem;
+  --primary-button-padding-x: 1.5rem;
+  --primary-button-rounded-border-top-left-radius: 6px;
+}
 
 
 /* 2) ————————————————————————————— Layout helper rules ————————————————————————————— */
@@ -27,14 +67,6 @@
   box-sizing: border-box;
 }
 
-/* Body / Fonts */
-body {
-  font-family: 'Work Sans', 'Roboto', sans-serif;
-  color: #333;
-  background: #fff;
-  line-height: 1.6;
-}
-
 /* Global Header Styling */
 h1 {
   font-family: 'Work Sans', sans-serif;
@@ -43,6 +75,15 @@ h1 {
   letter-spacing: 0.15em;
   color: #ffffff;              /* White text */
 }
+
+h1, h2, h3 {
+  font-family: var(--heading-font-font-family);
+  font-weight: var(--heading-font-font-weight);
+  text-transform: var(--heading-font-text-transform);
+  letter-spacing: var(--heading-font-letter-spacing);
+  color: var(--siteTitleColor);
+}
+
 
 /* 4) ————————————————————————————— Body & Typography ————————————————————————————— */
 body {
