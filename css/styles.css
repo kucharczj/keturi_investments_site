@@ -131,9 +131,50 @@ body {
   color: var(--siteTitleColor);
   text-decoration: none;
 }
-.desktop-nav a:hover {
+.desktop-nav .nav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-folder {
+  position: relative;
+}
+
+.folder-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #00384d; /* dark blue dropdown */
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.nav-folder:hover .folder-dropdown {
+  display: block;
+}
+
+.folder-dropdown li {
+  margin: 0.5rem 0;
+}
+
+.folder-dropdown a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  display: block;
+  white-space: nowrap;
+}
+
+.folder-dropdown a:hover {
   text-decoration: underline;
 }
+
 
 /* 7) ————————————————————————————— CTA Button ————————————————————————————— */
 .header-cta .cta-button {
@@ -145,6 +186,10 @@ body {
   font-weight: var(--body-font-font-weight);
   letter-spacing: 0.05em;
   text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #5a7e95;
 }
 
 /* 8) ————————————————————————————— Hamburger & Mobile Nav ————————————————————————————— */
