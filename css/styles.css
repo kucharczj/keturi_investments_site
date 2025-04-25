@@ -146,13 +146,10 @@ body {
 .folder-dropdown {
   display: none;
   position: absolute;
+  background-color: #003349;
+  padding: 1rem;
   top: 100%;
-  right: 0;
-  background-color: #00384d; /* dark blue dropdown */
-  padding: 0.5rem 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
-  z-index: 1000;
+  left: 0;
 }
 
 .nav-folder:hover .folder-dropdown {
@@ -172,10 +169,44 @@ body {
 }
 
 .folder-dropdown a:hover {
-  text-decoration: underline;
+  color: white;
+  text-decoration: none;
 }
 
-
+/* Mobile nav styling */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  padding: 2rem;
+  z-index: 1000;
+}
+.mobile-nav.open {
+  display: block;
+}
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+}
+.mobile-nav li {
+  margin: 1.5rem 0;
+}
+.mobile-nav a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #0c3c52;
+}
+.mobile-nav .submenu {
+  display: none;
+}
+.mobile-nav .back {
+  color: #6b8fa7;
+  font-size: 1rem;
+}
 /* 7) ————————————————————————————— CTA Button ————————————————————————————— */
 .header-cta .cta-button {
   background: hsla(var(--darkAccent-hsl),1);
@@ -190,57 +221,6 @@ body {
 
 .cta-button:hover {
   background-color: #5a7e95;
-}
-
-/* 8) ————————————————————————————— Hamburger & Mobile Nav ————————————————————————————— */
-.hamburger,
-.mobile-nav {
-  display: none;
-}
-@media (max-width: 768px) {
-  .desktop-nav { display: none; }
-  .hamburger {
-    display: inline-block;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  .hamburger .line {
-    width: 24px;
-    height: 2px;
-    background: var(--siteTitleColor);
-    margin: 6px 0;
-    transition: 0.3s;
-  }
-  .mobile-nav {
-    display: block;
-    position: fixed;
-    top:0; right:0;
-    width:100vw; height:100vh;
-    background: rgba(0,0,0,0.9);
-    transform: translateX(100%);
-    transition: transform .4s ease;
-    z-index: 999;
-    padding: 2rem;
-  }
-  .mobile-nav.open {
-    transform: translateX(0);
-  }
-  .mobile-nav ul {
-    list-style: none;
-    margin-top: 3rem;
-    text-align: center;
-  }
-  .mobile-nav li {
-    margin: 1.5rem 0;
-  }
-  .mobile-nav a {
-    font-family: var(--body-font-font-family), sans-serif;
-    font-weight: var(--body-font-font-weight);
-    font-size: var(--large-text-size);
-    color: var(--siteTitleColor);
-    text-decoration: none;
-  }
 }
 
 /* 9) ————————————————————————————— Hero Section ————————————————————————————— */
