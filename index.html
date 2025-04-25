@@ -6,12 +6,15 @@
   <meta name="description" content="KETURI Investment Management - Homepage" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: split into two links to avoid URL-encoding issues -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700
-          &family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,700
-          &display=swap"
+    href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,700&display=swap"
     rel="stylesheet"
   />
 
@@ -31,13 +34,19 @@
       <a href="index.html">KETURI Investment Management</a>
     </div>
 
-    <!-- Desktop Nav (visible only at large screens) -->
-    <nav class="desktop-nav">
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Our Philosophy</a></li>
-      </ul>
-    </nav>
+      <!-- Desktop Nav -->
+      <nav class="header-nav desktop-nav">
+        <ul>
+          <li class="nav-folder">
+            <a href="#" class="folder-title">About</a>
+            <ul class="folder-dropdown">
+              <li><a href="ourname.html">Our Name</a></li>
+              <li><a href="whatwedo.html">What We Do</a></li>
+            </ul>
+          </li>
+          <li><a href="ourphilosophy.html">Our Philosophy</a></li>
+        </ul>
+      </nav>
 
     <!-- CTA Button -->
     <div class="header-cta">
@@ -51,16 +60,24 @@
       <span class="line bottom-bun"></span>
     </button>
 
-    <!-- Mobile Overlay Nav (initially hidden) -->
-    <nav id="mobileNav" class="mobile-nav nav-closed">
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Our Philosophy</a></li>
-      </ul>
-    </nav>
-
-  </div> <!-- end .header-inner -->
-</header>
+      <!-- Mobile Nav Overlay -->
+      <nav id="mainNav" class="mobile-nav">
+        <ul>
+          <li>
+            <a href="#" id="aboutLink">About</a>
+            <div id="aboutOverlay" class="overlay-hidden">
+              <button id="backBtn">← Back</button>
+              <ul>
+                <li><a href="ourname.html">Our Name</a></li>
+                <li><a href="whatwedo.html">What We Do</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="ourphilosophy.html">Our Philosophy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
 <section class="hero hero-large" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5fb448c34758a50ced5b8b70/1651029297903-LAESIP4UU6OK0ABOYLHB/stone.jpg');">
   <div class="hero-overlay"></div>
