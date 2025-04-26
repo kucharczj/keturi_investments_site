@@ -338,6 +338,19 @@ body {
   margin-bottom:1rem;
 }
 
+.section-inner.narrow {
+  max-width: 700px;   /* You can adjust to 600–800px for desired tightness */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.two-columns.centered {
+  justify-content: center;
+  text-align: left; /* Keep list items left-aligned */
+}
+
+
 /* 11) ————————————————————————————— Footer ————————————————————————————— */
 .site-footer {
   background: hsla(var(--darkAccent-hsl),1);
