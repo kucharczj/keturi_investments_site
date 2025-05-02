@@ -181,6 +181,22 @@ body {
   text-decoration: none;
 }
 
+/* Add extra spacing between main content paragraphs */
+.spaced-top {
+  margin-top: 3rem;
+}
+
+/* Ensure the contact section is fully centered */
+.section-inner.narrow {
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  text-align: left;
+}
+
 /* Mobile nav styling */
 .mobile-nav {
   display: none;
