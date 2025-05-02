@@ -191,6 +191,26 @@ body {
   text-align: center;
 }
 
+.section-inner.narrow p {
+  margin-bottom: 2rem;
+  line-height: 1.75;
+}
+
+.section-inner.narrow h2,
+.section-inner.narrow h3 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-inner.narrow ul {
+  margin-left: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.section-inner.narrow li {
+  margin-bottom: 1rem;
+}
+
 .contact-form {
   max-width: 800px;
   margin: 2rem auto 0;
