@@ -2,29 +2,42 @@ document.addEventListener('DOMContentLoaded', function () {
   const aboutLink = document.getElementById('aboutLink');
   const folderDropdown = document.querySelector('.folder-dropdown');
   const navList = document.querySelector('.desktop-nav ul');
-  const hamburger = document.createElement('button');
 
-  // Create Hamburger Button
-  hamburger.innerHTML = '<div class="line"></div><div class="line"></div><div class="line"></div>';
-  hamburger.classList.add('hamburger');
-  document.querySelector('.header-inner').appendChild(hamburger);
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileNav = document.getElementById('mobileNav');
 
-  // Hamburger toggle
-  hamburger.addEventListener('click', function () {
-    navList.classList.toggle('open');
+  // Desktop "About" dropdown toggle (on mobile only)
+  if (aboutLink) {
+    aboutLink.addEventListener('click', function (e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        folderDropdown.style.display = folderDropdown.style.display === 'block' ? 'none' : 'block';
+      }
+    });
+  }
+
+  // Mobile hamburger toggle
+  hamburgerBtn.addEventListener('click', function () {
+    const isOpen = mobileNav.classList.toggle('open');
+    hamburgerBtn.setAttribute('aria-expanded', isOpen);
+    document.body.classList.toggle('no-scroll', isOpen);
   });
 
-  // About Link toggle for Mobile
-  aboutLink.addEventListener('click', function (e) {
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-      folderDropdown.style.display = folderDropdown.style.display === 'block' ? 'none' : 'block';
+  // Close on ESC key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      mobileNav.classList.remove('open');
+      hamburgerBtn.setAttribute('aria-expanded', false);
+      document.body.classList.remove('no-scroll');
     }
   });
 
-  // Close dropdown on window resize
+  // Close nav on resize if switching to desktop
   window.addEventListener('resize', function () {
     if (window.innerWidth > 768) {
+      mobileNav.classList.remove('open');
+      hamburgerBtn.setAttribute('aria-expanded', false);
+      document.body.classList.remove('no-scroll');
       folderDropdown.style.display = '';
       navList.classList.remove('open');
     }
