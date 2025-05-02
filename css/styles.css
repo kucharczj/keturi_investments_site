@@ -328,11 +328,14 @@ body {
   text-transform: uppercase;
   text-align: center;
   line-height: 1.8;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  margin-top: 3rem;
 }
 
 .two-columns {
-  display:flex; flex-wrap:wrap; gap:2rem;
+  display:flex; 
+  flex-wrap:wrap; 
+  gap:4rem;
 }
 .two-columns .column {
   flex:1 1 300px;
@@ -558,3 +561,13 @@ body {
     flex-direction: column;
   }
 }
+
+a:visited,
+.cta-button:visited,
+.hero-btn:visited,
+.section-inner a:visited {
+  color: inherit;               /* inherit the color from normal state */
+  background-color: inherit;   /* prevent unwanted background change */
+  text-decoration: none;       /* maintain underline or remove as needed */
+}
+
