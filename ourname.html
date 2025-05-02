@@ -1,136 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Our Name — KETURI Investment Management</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <title>Our Name - KETURI Investment Management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Fonts: split into two links to avoid URL-encoding issues -->
+  <!-- Fonts and Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
 
-  <!-- Optional: Link to your own stylesheet if desired -->
   <link rel="stylesheet" href="css/styles.css" />
-
-  <!-- Meta tags from the original code -->
-  <meta name="description" content="" />
-  <meta property="og:site_name" content="KETURI Investment Management"/>
-  <meta property="og:title" content="Our Name — KETURI Investment Management"/>
-  <meta property="og:url" content="https://www.keturiinvestments.com/ourname"/>
-  <meta property="og:type" content="website"/>
-  <meta itemprop="name" content="Our Name — KETURI Investment Management"/>
-  <meta itemprop="url" content="https://www.keturiinvestments.com/ourname"/>
-  <meta name="twitter:title" content="Our Name — KETURI Investment Management"/>
-  <meta name="twitter:url" content="https://www.keturiinvestments.com/ourname"/>
-  <meta name="twitter:card" content="summary"/>
+  <script src="js/script.js" defer></script>
 </head>
-
 <body>
-  <!-- HEADER (static) -->
+
+  <!-- Header -->
   <header class="site-header">
     <div class="header-inner">
-      <!-- Site Title / Logo -->
       <div class="header-title">
         <a href="index.html">KETURI Investment Management</a>
       </div>
-
-      <!-- Main Navigation -->
-      <nav class="header-nav">
+      <nav class="desktop-nav">
         <ul>
-          <!-- "About" folder (currently active), with sub-links: Our Name (active), What We Do -->
-          <li class="nav-folder active">
-            <a href="about.html" class="folder-title">About</a>
+          <li class="nav-folder">
+            <a href="#" id="aboutLink">About ▾</a>
             <ul class="folder-dropdown">
-              <!-- Mark "Our Name" as active -->
               <li><a href="ourname.html">Our Name</a></li>
               <li><a href="whatwedo.html">What We Do</a></li>
             </ul>
           </li>
-          <li>
-            <a href="ourphilosophy.html">Our Philosophy</a>
-          </li>
+          <li><a href="ourphilosophy.html">Our Philosophy</a></li>
+          <li><a href="contactus.html" class="cta-button">Contact Us</a></li>
         </ul>
       </nav>
-      <!-- Contact Us CTA -->
-      <div class="header-cta">
-        <a href="contactus.html" class="cta-button">Contact Us</a>
-      </div>
-
-      <!-- Burger Icon (no JS included) -->
-      <button class="header-burger-btn" aria-label="Open Menu">
-        <div class="burger-box">
-          <div class="top-bun"></div>
-          <div class="patty"></div>
-          <div class="bottom-bun"></div>
-        </div>
-      </button>
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main id="page" class="container" role="main">
-    
-    <!-- SECTION #1 (Hero with background image, small height) -->
-    <section class="hero-section black-section" style="
-      background: url('https://images.squarespace-cdn.com/content/v1/5fb448c34758a50ced5b8b70/1651027194975-K756QNMJ315INOV9HXKX/stone_opaque20.jpg') 
-                  no-repeat center center / cover;
-      position: relative;
-      min-height: 50vh; /* 'section-height--small' approximation */
-    ">
-      <!-- Overlay (semi-transparent black) -->
-      <div class="section-background-overlay" style="background-color: rgba(0,0,0,0.65); position: absolute; inset: 0;"></div>
-
-      <div class="hero-content" style="position: relative; z-index: 1; text-align: center; padding: 4rem 1rem;">
-        <h1>Q: KETURI – WHAT<br />DOES IT MEAN?</h1>
-      </div>
-    </section>
-    
-    <!-- SECTION #2 -->
-    <section class="section-medium">
-    <div class="section-inner narrow">
-      <h2 class="subtitle">A: THE ANSWER IS QUITE SIMPLE AND ELEGANT, MUCH LIKE OUR INVESTMENT PHILOSOPHY.</h2>
-      <p>KETURI is the Lithuanian word for the number four. Lithuanian is a Baltic language most closely related to ancient Sanskrit. The founding members of KETURI have Lithuanian heritage, bringing further meaning to our name.</p>
+  <!-- Hero Section -->
+  <section class="hero hero-large" style="background-image: url('images/blue-stone.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Q: KETURI – What does it mean?</h1>
     </div>
+  </section>
 
-    <div class="section-inner two-columns" style="margin-top: 3rem;">
+  <!-- Answer Section -->
+  <section class="section-medium">
+    <div class="section-inner narrow">
+      <h2>
+        A: The answer is quite simple and elegant, much like our investment philosophy.
+      </h2>
+      <p>
+        KETURI is the Lithuanian word for the number four. Lithuanian is a Baltic language most closely related to ancient Sanskrit.
+        The founding members of KETURI have Lithuanian heritage, bringing further meaning to our name.
+      </p>
+    </div>
+  </section>
+
+  <!-- Ideas Behind the Number Four -->
+  <section class="section-medium">
+    <div class="section-inner two-columns centered">
       <div class="column">
-        <h3>IDEAS BEHIND THE NUMBER FOUR</h3>
+        <h3>Ideas Behind the Number Four</h3>
         <ul>
-          <li>
-            The long-term timeline imbedded into our philosophy of investing for generations. Time and the eventual compounding can make a dramatic difference in wealth. No matter where you are in your family’s generational continuum, think of four generations: grandparents, parents, children and grandchildren.
-          </li>
-          <li>
-            The four general categories of investments, each with varying profiles: <strong>stable</strong>, <strong>core</strong>, <strong>evolving</strong>, and <strong>international</strong>. Portfolios can be dedicated to one category or a mixture, depending on your objectives. All are managed under our KETURI philosophy with high ethics and a commitment to quality.
-          </li>
+          <li>The long-term timeline imbedded into our philosophy of investing for generations. Time and the eventual compounding can make a dramatic difference in wealth. No matter where you are in your family’s generational continuum, think of four generations: grandparents, parents, children and grandchildren.</li>
+          <li>The four general categories of investments, each with varying profiles: <strong>stable, core, evolving,</strong> and <strong>international</strong>. Portfolios can be dedicated to one category or a mixture, depending on your objectives. All are managed under our KETURI philosophy with high ethics and a commitment to quality.</li>
         </ul>
       </div>
       <div class="column">
+        <h3>&nbsp;</h3>
         <ul>
           <li><strong>Discipline</strong> – take appropriate, timely action and make decisions aligned to our clients’ objectives</li>
-          <li><strong>Understanding</strong> – thoughtfully harness the dynamics of each investment keeping in mind their influence on our clients lives and goals</li>
+          <li><strong>Understanding</strong> – thoughtfully harness the dynamics of each investment keeping in mind the influence on our clients’ lives and goals</li>
           <li><strong>Effectiveness</strong> – our work must be clear, long-term, cost effective and results-oriented</li>
           <li><strong>Confidential</strong> – our client information and conversations are always protected</li>
         </ul>
       </div>
     </div>
   </section>
-</main>
 
-
-  <!-- FOOTER -->
-  <footer class="footer-dark" style="background: #222; color: #fff; padding: 2rem; text-align: center;">
-    <p>17620 Pilkington Road, Lake Oswego, OR 97035 | (503) 970-6830 | keturi@keturiinvestments.com</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>17620 Pilkington Road, Lake Oswego, OR 97035 | (503) 970-6830 | keturi@keturiinvestments.com</p>
+    </div>
   </footer>
 
-  <!-- No squarespace scripts, so no dynamic behavior.
-       If you want the burger menu or other features, add your own JS. -->
 </body>
 </html>
