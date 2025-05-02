@@ -372,28 +372,20 @@ body {
 
 .info-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
+  flex-wrap: nowrap; /* this ensures horizontal layout */
   justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
 }
 
 .info-column {
   flex: 1 1 45%;
-  font-size: 1rem;
-  color: #2f4f60;
-  font-weight: 300;
-  line-height: 1.7;
 }
 
 .info-column h3 {
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 300;
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: #2f4f60;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
+
 
 .info-column a {
   color: #6b8fa7;
@@ -614,13 +606,12 @@ body {
   text-decoration: none;       /* maintain underline or remove as needed */
 }
 
-.desktop-nav a,
-.header-title a {
-  color: white;
-}
-
 a:visited {
   color: #6b8fa7; /* match your unvisited link color */
 }
 
+.desktop-nav a:visited,
+.header-title a:visited {
+  color: white;
+}
 
