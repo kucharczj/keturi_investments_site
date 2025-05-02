@@ -146,10 +146,14 @@ body {
 .folder-dropdown {
   display: none;
   position: absolute;
-  background-color: #003349;
-  padding: 1rem;
   top: 100%;
   left: 0;
+  background-color: #04364A;  /* dark background for dropdown */
+  padding: 1rem;
+  z-index: 1000;
+  min-width: 160px;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 
 .nav-folder:hover .folder-dropdown {
@@ -164,8 +168,8 @@ body {
   color: white;
   text-decoration: none;
   font-size: 1rem;
+  font-weight: 400;
   display: block;
-  white-space: nowrap;
 }
 
 .folder-dropdown a:hover {
