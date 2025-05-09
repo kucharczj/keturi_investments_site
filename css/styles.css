@@ -288,7 +288,8 @@ body {
   position: relative;
   z-index: 1;
   padding: 2rem;
-  max-width: 100%; /* originally was 600px */
+  max-width: 100%;
+  text-align: center;
 }
 
 .hero-content h1 {
@@ -301,16 +302,25 @@ body {
   line-height: 1.4;
 }
 
-.hero-btn {
-  background: hsla(var(--darkAccent-hsl),1);
-  color: var(--siteBackgroundColor);
-  padding: .75rem 1.25rem;
-  border-radius:4px;
-  font-family: var(--body-font-font-family),sans-serif;
+.hero-content .hero-btn {
+  background: hsla(var(--darkAccent-hsl), 1);
+  color: white !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-family: var(--body-font-font-family), sans-serif;
   font-weight: var(--body-font-font-weight);
-  letter-spacing:0.05em;
+  letter-spacing: 0.05em;
   text-decoration: none;
+  margin-top: 2rem;
+  display: inline-block;
 }
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(27, 54, 78, 0.45); /* blue-gray overlay */
+}
+
 .subtitle {
   font-size: 1.2rem;
   font-weight: 300;
