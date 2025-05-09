@@ -705,16 +705,11 @@ body {
   text-decoration: underline;
 }
 
-a:not(.cta-button):not(.hero-btn):not(.desktop-nav a):visited {
-  color: #6b8fa7;
-}
-
-a:visited {
-  color: #6b8fa7; /* match your unvisited link color */
-}
-
+/* Ensure navigation and hero buttons stay white */
 .desktop-nav a:visited,
-.header-title a:visited {
+.header-title a:visited,
+.hero-btn:visited,
+.cta-button:visited {
   color: white;
+  text-decoration: none;
 }
-
