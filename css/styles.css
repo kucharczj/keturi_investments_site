@@ -715,6 +715,15 @@ body {
 }
 
 /* Main page fixed two-column layout for "Our Philosophy", "Why Keturi?", "Connect With Us" */
+.fixed-split-grid {
+  max-width: var(--sqs-site-max-width);
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
 .fixed-split-grid .info-row {
   display: flex;
   flex-wrap: nowrap;
