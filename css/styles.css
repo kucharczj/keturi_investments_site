@@ -698,14 +698,14 @@ body {
   }
 }
 
-.hero-btn:visited,
 .section-inner a:visited {
   color: inherit;               /* inherit the color from normal state */
   background-color: inherit;   /* prevent unwanted background change */
   text-decoration: none;       /* maintain underline or remove as needed */
 }
 
-a:not(.cta-button):visited {
+/* Only apply blue to body text links, not buttons */
+a:not(.cta-button):not(.hero-btn):visited {
   color: #6b8fa7;
 }
 
