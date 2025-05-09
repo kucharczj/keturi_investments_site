@@ -148,12 +148,13 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #04364A;  /* dark background for dropdown */
+  background-color: #04364A; /* dark background */
   padding: 1rem;
   z-index: 1000;
-  min-width: 160px;
+  min-width: 220px; /* increased from 160px */
   border-radius: 4px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  white-space: nowrap; /* prevent wrapping */
 }
 
 .nav-folder .folder-dropdown {
