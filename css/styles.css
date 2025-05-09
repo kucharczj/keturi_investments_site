@@ -698,14 +698,14 @@ body {
   }
 }
 
-.section-inner a:visited {
-  color: inherit;               /* inherit the color from normal state */
-  background-color: inherit;   /* prevent unwanted background change */
-  text-decoration: none;       /* maintain underline or remove as needed */
+/* Style visited links only in main content areas */
+.section-inner a:visited,
+.section-medium a:visited {
+  color: #6b8fa7;
+  text-decoration: underline;
 }
 
-/* Only apply blue to body text links, not buttons */
-a:not(.cta-button):not(.hero-btn):visited {
+a:not(.cta-button):not(.hero-btn):not(.desktop-nav a):visited {
   color: #6b8fa7;
 }
 
