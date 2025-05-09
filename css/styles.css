@@ -253,18 +253,20 @@ body {
 }
 /* 7) ————————————————————————————— CTA Button ————————————————————————————— */
 .header-cta .cta-button {
-  background: hsla(var(--darkAccent-hsl),1);
+  background: #6b8fa7;
   color: var(--siteBackgroundColor);
   padding: var(--primary-button-padding-y) var(--primary-button-padding-x);
   border-radius: var(--primary-button-rounded-border-top-left-radius);
   font-family: var(--body-font-font-family),sans-serif;
-  font-weight: var(--body-font-font-weight);
+  font-weight: bold;
   letter-spacing: 0.05em;
   text-decoration: none;
+  margin-top
 }
 
 .cta-button:hover {
   background-color: #5a7e95;
+  color: white;
 }
 
 /* 9) ————————————————————————————— Hero Section ————————————————————————————— */
