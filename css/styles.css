@@ -253,7 +253,7 @@ body {
 }
 /* 7) ————————————————————————————— CTA Button ————————————————————————————— */
 .header-cta .cta-button {
-  background: #6b8fa7;
+  background: #7c95a8;
   color: var(--siteBackgroundColor);
   padding: var(--primary-button-padding-y) var(--primary-button-padding-x);
   border-radius: var(--primary-button-rounded-border-top-left-radius);
@@ -570,12 +570,12 @@ body {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #6b8fa7;
+  border-color: #7c95a8;
   outline: none;
 }
 
 .submit-btn {
-  background-color: #6b8fa7;
+  background-color: #7c95a8;
   color: #fff;
   font-size: 1rem;
   padding: 0.75rem 2rem;
@@ -692,12 +692,15 @@ body {
   }
 }
 
-.cta-button:visited,
 .hero-btn:visited,
 .section-inner a:visited {
   color: inherit;               /* inherit the color from normal state */
   background-color: inherit;   /* prevent unwanted background change */
   text-decoration: none;       /* maintain underline or remove as needed */
+}
+
+a:not(.cta-button):visited {
+  color: #6b8fa7;
 }
 
 a:visited {
