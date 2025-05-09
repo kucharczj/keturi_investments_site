@@ -261,12 +261,14 @@ body {
   font-weight: bold;
   letter-spacing: 0.05em;
   text-decoration: none;
-  margin-top
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
 .cta-button:hover {
   background-color: #5a7e95;
   color: white;
+  opacity: 0.85;
 }
 
 /* 9) ————————————————————————————— Hero Section ————————————————————————————— */
