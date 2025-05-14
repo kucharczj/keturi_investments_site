@@ -536,14 +536,12 @@ body {
 .contact-form {
   margin-top: 2rem;
   max-width: 600px;
-  margin-bottom: 0.5rem;
 }
 
 .form-group {
   margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
-  margin-bottom: 0.5rem;
 }
 
 .form-group.split {
@@ -587,6 +585,14 @@ body {
 .contact-form textarea:focus {
   border-color: #7c95a8;
   outline: none;
+}
+
+.contact-form .form-group > label {
+  font-weight: 400;
+  color: #2f4f60;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 0.5rem; /* This is the key spacing line */
 }
 
 .submit-btn {
