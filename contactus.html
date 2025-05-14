@@ -8,21 +8,49 @@
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="header-title"><a href="index.html">KETURI Investment Management</a></div>
-      <nav class="desktop-nav">
-        <ul>
-          <li><a href="ourname.html">Our Name</a></li>
-          <li><a href="whatwedo.html">What We Do</a></li>
-          <li><a href="ourphilosophy.html">Our Philosophy</a></li>
-        </ul>
-      </nav>
-      <div class="header-cta">
-        <a href="contactus.html" class="cta-button">Contact Us</a>
-      </div>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-title">
+      <a href="index.html">KETURI Investment Management</a>
     </div>
-  </header>
+    <nav class="desktop-nav">
+      <ul>
+        <li class="nav-folder">
+          <a href="#" class="folder-title">About</a>
+          <ul class="folder-dropdown">
+            <li><a href="ourname.html">Our Name</a></li>
+            <li><a href="whatwedo.html" aria-current="page">What We Do</a></li>
+          </ul>
+        </li>
+        <li><a href="ourphilosophy.html">Our Philosophy</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+      <span class="line top-bun"></span>
+      <span class="line patty"></span>
+      <span class="line bottom-bun"></span>
+    </button>
+    <nav id="mainNav" class="mobile-nav">
+      <ul>
+        <li>
+          <a href="#" id="aboutLink">About</a>
+          <div id="aboutOverlay" class="overlay-hidden">
+            <button id="backBtn">← Back</button>
+            <ul>
+              <li><a href="ourname.html">Our Name</a></li>
+              <li><a href="whatwedo.html">What We Do</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="ourphilosophy.html">Our Philosophy</a></li>
+        <li><a href="contactus.html" class="cta-button">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a href="contactus.html" class="cta-button">Contact Us</a>
+    </div>
+  </div>
+</header>
 
   <main>
     <section class="hero contact-hero" style="background-image: url('https://images.squarespace-cdn.com/content/v1/5fb448c34758a50ced5b8b70/1651029499770-QN8TUFE88YYUPK02HH07/wall_enhanced.jpg');">
