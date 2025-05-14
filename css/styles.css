@@ -536,12 +536,14 @@ body {
 .contact-form {
   margin-top: 2rem;
   max-width: 600px;
+  margin-bottom: 0.5rem;
 }
 
 .form-group {
   margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
+  margin-bottom: 0.5rem;
 }
 
 .form-group.split {
