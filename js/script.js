@@ -17,11 +17,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Mobile hamburger toggle
-  hamburgerBtn.addEventListener('click', function () {
-    const isOpen = mobileNav.classList.toggle('open');
-    hamburgerBtn.setAttribute('aria-expanded', isOpen);
-    document.body.classList.toggle('no-scroll', isOpen);
-  });
+  if (hamburgerBtn && mobileNav) {
+    hamburgerBtn.addEventListener('click', function () {
+      const isOpen = mobileNav.classList.toggle('open');
+      hamburgerBtn.setAttribute('aria-expanded', isOpen);
+      document.body.classList.toggle('no-scroll', isOpen);
+    });
+  }
 
   // Close on ESC key
   document.addEventListener('keydown', function (e) {
@@ -32,14 +34,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Close nav on resize if switching to desktop
   window.addEventListener('resize', function () {
     if (window.innerWidth > 768) {
-      mobileNav.classList.remove('open');
-      hamburgerBtn.setAttribute('aria-expanded', false);
+      if (mobileNav) mobileNav.classList.remove('open');
+      if (hamburgerBtn) hamburgerBtn.setAttribute('aria-expanded', false);
       document.body.classList.remove('no-scroll');
-      folderDropdown.style.display = '';
-      navList.classList.remove('open');
+      if (folderDropdown) folderDropdown.style.display = '';
+      if (navList) navList.classList.remove('open');
     }
   });
 });
