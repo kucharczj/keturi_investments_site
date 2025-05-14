@@ -92,10 +92,10 @@ body {
 
 /* 5) ————————————————————————————— Header ————————————————————————————— */
 .site-header {
-  position: absolute;
+  position: relative;
   top: 0; left: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 1001;
   background: transparent !important;
 }
 .header-inner {
@@ -332,6 +332,7 @@ body {
   position: absolute;
   inset: 0;
   background: rgba(27, 54, 78, 0.45); /* blue-gray overlay */
+  pointer-events: none;
 }
 
 .subtitle {
