@@ -484,6 +484,10 @@ body {
   font-size: var(--small-text-size);
 }
 
+.site-footer p + p {
+  margin-top: 2rem; /* or adjust to your preference */
+}
+
 /* ========== Mobile view ============ */
 
 /* Hamburger menu visibility fix */
