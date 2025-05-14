@@ -37,13 +37,13 @@
         <!-- Left Column: Contact Info -->
         <div class="contact-info">
           <h2>Contact Us</h2>
-          <p><a href="mailto:keturi@keturiinvestments.com">keturi@keturiinvestments.com</a></p>
+          <p><a href="mailto:juliak@keturiinvestments.com">keturi@keturiinvestments.com</a></p>
           <p>(503) 970-6830</p>
           <p>17620 Pilkington Road<br />Lake Oswego, OR 97035</p>
         </div>
 
         <!-- Right Column: Form -->
-        <form class="contact-form">
+        <form action="https://formspree.io/f/xvgadkan" method="POST" class="contact-form">
           <div class="form-row">
             <div class="field">
               <label for="firstName">First Name</label>
@@ -65,15 +65,48 @@
           <textarea id="message" name="message" rows="6" required></textarea>
 
           <button type="submit" class="submit-btn">Send</button>
+
+          <input type="hidden" name="_captcha" value="false">
+
         </form>
+      
+      <div id="thankYouMessage" style="display: none; margin-top: 2rem;">
+        <p>Thank you for contacting KETURI. We have received your message and will reply shortly.</p>
       </div>
+    </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
       <p>17620 Pilkington Road, Lake Oswego, OR 97035 | (503) 970-6830 | keturi@keturiinvestments.com</p>
+      <p>Keturi Investment Management, LLC is a licensed investment adviser in Oregon. The firm may only transact business in other states if first licensed or excluded from licensing requirements. Transacting securities or rendering  investment advice for compensation will not be made prior to compliance with licensing requirements or a valid exclusion from licensing.</p>
     </div>
   </footer>
+
+  <script>
+  const form = document.getElementById("contactForm");
+  const thankYouMessage = document.getElementById("thankYouMessage");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      form.style.display = "none";
+      thankYouMessage.style.display = "block";
+    } else {
+      alert("There was a problem submitting the form. Please try again.");
+    }
+  });
+  </script>
+
 </body>
 </html>
