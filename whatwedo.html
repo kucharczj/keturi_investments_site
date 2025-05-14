@@ -93,7 +93,7 @@
       We would be pleased to elaborate further on any of these options and discuss how KETURI may work for you and your family.
     </p>
 
-    <form class="contact-form" style="margin: 2rem auto 0; max-width: 800px; text-align: left;">
+    <form id="contactForm" class="contact-form" action="https://formspree.io/f/xvgadkan" method="POST" style="margin: 2rem auto 0; max-width: 800px; text-align: left;">
       <div class="form-group split">
         <div class="field">
           <label for="firstName">First Name</label>
@@ -122,6 +122,9 @@
 
       <button type="submit" class="submit-btn">Submit</button>
     </form>
+    <div id="thankYouMessage" style="display:none; margin-top:2rem; color:#2f4f60;">
+      <p>Thank you for contacting KETURI. We have received your message and will reply shortly.</p>
+    </div>
   </div>
 </section>
 
@@ -129,13 +132,31 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <p>17620 Pilkington Road, Lake Oswego, OR 97035 | (503) 970-6830 | keturi@keturiinvestments.com</p>
-    <p>&copy; <span id="year"></span> KETURI Investment Management</p>
+    <p>Keturi Investment Management, LLC is a licensed investment adviser in the State of Oregon. Prior to any advisory work conducted outside of Oregon, Keturi Investment Management LLC would become licensed or registered in that jurisdiction or qualify for an exemption or exclusion to registration. Individualized responses to persons related to securities transactions will not be made prior to completion of licensing requirements.  </p>
   </div>
 </footer>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+  <script>
+    const form = document.getElementById('contactForm');
+    const thankYou = document.getElementById('thankYouMessage');
+  
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+  
+      if (response.ok) {
+        form.style.display = 'none';
+        thankYou.style.display = 'block';
+      } else {
+        alert('There was an issue submitting your form. Please try again.');
+      }
+    });
+  </script>
+  
 </body>
 </html>
