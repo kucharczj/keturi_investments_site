@@ -808,9 +808,19 @@ body {
   }
 }
 .hidden {
-  display: none;
+  display: none !importantr;
 }
 
+.mobile-nav .mobile-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mobile-nav .mobile-menu.show {
+  display: flex;
+}
 .mobile-menu {
   list-style: none;
   padding: 0;
