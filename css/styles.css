@@ -228,7 +228,7 @@ body {
   width: 100%;
   height: 100vh;
   background: white;
-  z-index: 2r000;
+  z-index: 2000;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -809,7 +809,7 @@ body {
   }
 }
 .hidden {
-  display: none !importantr;
+  display: none !important;
 }
 
 .mobile-nav .mobile-menu {
