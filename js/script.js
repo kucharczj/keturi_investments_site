@@ -25,6 +25,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+   // MOBILE SUBMENU TOGGLE 
+  const aboutSubMenu = document.getElementById('aboutSubMenu');
+  const mainMenu = document.getElementById('mainMenu');
+  const backBtn = document.getElementById('backBtn');
+
+  if (aboutLink && aboutSubMenu && mainMenu && backBtn) {
+    aboutLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      mainMenu.classList.add('hidden');
+      aboutSubMenu.classList.remove('hidden');
+    });
+
+    backBtn.addEventListener('click', function () {
+      aboutSubMenu.classList.add('hidden');
+      mainMenu.classList.remove('hidden');
+    });
+  }
+  
   // Close on ESC key
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
