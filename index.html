@@ -61,15 +61,17 @@
       </button>
       
       <!-- Mobile Nav -->
-      <nav class="mobile-nav" id="mobileNav">
-        <ul class="top-level">
-          <li class="has-submenu"><a href="#">About</a></li>
+      <nav id="mobileNav" class="mobile-nav">
+        <!-- Main Menu -->
+        <ul id="mainMenu" class="mobile-menu">
+          <li><a href="#" id="aboutLink">About</a></li>
           <li><a href="ourphilosophy.html">Our Philosophy</a></li>
-          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="contactus.html" class="cta-button">Contact Us</a></li>
         </ul>
       
-        <ul class="submenu" id="aboutSubmenu">
-          <li><a href="#" class="back">← Back</a></li>
+        <!-- Submenu for About -->
+        <ul id="aboutSubMenu" class="mobile-menu submenu hidden">
+          <li><button id="backBtn" class="back-btn">← Back</button></li>
           <li><a href="ourname.html">Our Name</a></li>
           <li><a href="whatwedo.html">What We Do</a></li>
         </ul>
