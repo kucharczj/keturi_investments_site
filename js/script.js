@@ -6,15 +6,27 @@ document.addEventListener('DOMContentLoaded', function () {
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const mobileNav = document.getElementById('mobileNav');
 
-  // Desktop "About" dropdown toggle (on mobile only)
-  if (aboutLink) {
-    aboutLink.addEventListener('click', function (e) {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
+if (aboutLink && aboutSubMenu && mainMenu && backBtn) {
+  aboutLink.addEventListener('click', function (e) {
+    e.preventDefault(); // Always prevent default
+    if (window.innerWidth <= 768) {
+      // Mobile submenu behavior
+      mainMenu.classList.add('hidden');
+      aboutSubMenu.classList.remove('hidden');
+    } else {
+      // Desktop dropdown toggle (if needed)
+      if (folderDropdown) {
         folderDropdown.style.display = folderDropdown.style.display === 'block' ? 'none' : 'block';
       }
-    });
-  }
+    }
+  });
+
+  backBtn.addEventListener('click', function () {
+    aboutSubMenu.classList.add('hidden');
+    mainMenu.classList.remove('hidden');
+  });
+}
+
 
   // Mobile hamburger toggle
   if (hamburgerBtn && mobileNav) {
