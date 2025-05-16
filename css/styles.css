@@ -855,3 +855,43 @@ body {
 body.no-scroll {
   overflow: hidden;
 }
+
+/* Ensure header stays fixed above mobile nav */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2001;
+  background-color: white; /* optional: white background for readability */
+}
+
+/* Adjust padding so mobile menu is not hidden behind header */
+.mobile-nav {
+  padding-top: 6rem; /* enough space for fixed header */
+}
+
+/* Mobile nav font styling */
+.mobile-nav a {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #0c3c52;
+}
+
+.mobile-nav .mobile-menu li {
+  margin: 2rem 0;
+}
+
+.mobile-nav .back-btn {
+  font-size: 1.2rem;
+  color: #6b8fa7;
+}
+
+/* Optional: Center logo/title at top */
+.header-title a {
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #0c3c52;
+}
