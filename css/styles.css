@@ -271,6 +271,27 @@ body {
   text-align: center;
   text-decoration: none;
 }
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.submenu.hidden,
+.mobile-menu.hidden {
+  display: none;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #7c95a8;
+  cursor: pointer;
+}
+
 /* 7) ————————————————————————————— CTA Button ————————————————————————————— */
 .header-cta .cta-button {
   background: #7c95a8;
