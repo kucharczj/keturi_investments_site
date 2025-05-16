@@ -807,3 +807,33 @@ body {
     max-width: 100%;
   }
 }
+.hidden {
+  display: none;
+}
+
+.mobile-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu li {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #0c3c52;
+}
+
+.back-btn {
+  font-size: 1rem;
+  color: #6b8fa7;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 1rem;
+}
