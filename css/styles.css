@@ -107,14 +107,16 @@ body {
   justify-content: space-between;
 }
 .header-title a {
+  display: block;
   font-family: var(--heading-font-font-family), sans-serif;
-  font-weight: var(--heading-font-font-weight);
-  font-size: var(--large-text-size);
-  letter-spacing: var(--heading-font-letter-spacing);
-  text-transform: var(--heading-font-text-transform);
-  color: var(--siteTitleColor);
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #0c3c52;
   text-decoration: none;
 }
+
 
 /* 6) ————————————————————————————— Desktop Nav ————————————————————————————— */
 .desktop-nav ul {
@@ -838,7 +840,8 @@ body {
 
 .mobile-menu a {
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 2rem;
+  font-weight: 300;
   color: #0c3c52;
 }
 
@@ -864,12 +867,13 @@ body.no-scroll {
     left: 0;
     width: 100%;
     z-index: 2001;
-    background-color: white; /* optional: white background for readability */
+    background-color: white;
+    padding: 1rem 2rem;
   }
   
   /* Adjust padding so mobile menu is not hidden behind header */
   .mobile-nav {
-    padding-top: 6rem; /* enough space for fixed header */
+    padding-top: 5rem; /* enough space for fixed header */
   }
   
   /* Mobile nav font styling */
@@ -887,16 +891,11 @@ body.no-scroll {
     font-size: 1.2rem;
     color: #6b8fa7;
   }
-  
-  /* Optional: Center logo/title at top */
-  .header-title a {
-    display: block;
-    font-family: var(--heading-font-font-family), sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: #0c3c52;
-    text-decoration: none;
+
+    .header-title {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
   }
+  
 }
