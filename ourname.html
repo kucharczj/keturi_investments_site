@@ -21,17 +21,53 @@
       <div class="header-title">
         <a href="index.html">KETURI Investment Management</a>
       </div>
-      <nav class="desktop-nav">
-        <ul>
-          <li class="nav-folder">
-            <a href="#" id="aboutLink">About ▾</a>
-            <ul class="folder-dropdown">
-              <li><a href="ourname.html">Our Name</a></li>
-              <li><a href="whatwedo.html">What We Do</a></li>
-            </ul>
-          </li>
+         <!-- Desktop Nav -->
+    <nav class="desktop-nav">
+      <ul>
+        <li class="nav-folder">
+          <a href="#" class="folder-title">About ▾</a>
+          <ul class="folder-dropdown">
+            <li><a href="ourname.html">Our Name</a></li>
+            <li><a href="whatwedo.html">What We Do</a></li>
+          </ul>
+        </li>
+        <li><a href="ourphilosophy.html">Our Philosophy</a></li>
+      </ul>
+    </nav>
+
+    <!-- CTA Button -->
+    <div class="header-cta">
+      <a href="contactus.html" class="cta-button">Contact Us</a>
+    </div>
+    
+    <!-- Hamburger for mobile -->
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+      
+      <!-- Mobile Nav -->
+
+    <!-- Name and Close Button at the top -->
+      <nav id="mobileNav" class="mobile-nav">
+        <div class="mobile-nav-header">
+          <div class="mobile-site-title">KETURI INVESTMENT MANAGEMENT</div>
+          <button id="closeNavBtn" aria-label="Close Menu" class="close-btn">×</button>
+        </div>
+
+        <!-- Main Menu -->
+        <ul id="mainMenu" class="mobile-menu">
+          <li><a href="#" id="aboutLink">About > </a></li>
           <li><a href="ourphilosophy.html">Our Philosophy</a></li>
           <li><a href="contactus.html" class="cta-button">Contact Us</a></li>
+        </ul>
+      
+        <!-- Submenu for About -->
+        <ul id="aboutSubMenu" class="mobile-menu submenu hidden">
+          <li><button id="backBtn" class="back-btn">← Back</button></li>
+          <li><a href="ourname.html">Our Name</a></li>
+          <li><a href="whatwedo.html">What We Do</a></li>
         </ul>
       </nav>
     </div>
