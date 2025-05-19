@@ -322,11 +322,11 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 70vh;
+  min-height: 60vh;
   background-size: cover;
   background-position: center;
 }
-.hero-large { min-height: 80vh; }
+.hero-large { min-height: 70vh; }
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -344,9 +344,9 @@ body {
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   color: white;
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
   line-height: 1.4;
 }
 
@@ -378,7 +378,7 @@ body {
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 300;
   color: #2f4f60;
   text-transform: uppercase;
@@ -511,8 +511,8 @@ body {
 
 .financial-summary-text {
   text-transform: uppercase;
-  font-size: 1.6rem;
-  letter-spacing: 0.15em;
+  font-size: 2rem;
+  letter-spacing: 0.2em;
   color: #2f4f60;
   font-weight: 300;
   line-height: 1.8;
@@ -523,7 +523,7 @@ body {
 .financial-summary-line {
   border: none;
   border-top: 1px solid #2f4f60;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -911,8 +911,8 @@ body.no-scroll {
     display: block;
     font-family: var(--heading-font-font-family), sans-serif;
     font-weight: 300;
-    font-size: 1rem;
-    letter-spacing: 0.15em;
+    font-size: 1.25rem;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #0c3c52;
     text-decoration: none;
