@@ -26,31 +26,38 @@
         <li><a href="ourphilosophy.html">Our Philosophy</a></li>
       </ul>
     </nav>
-    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
-      <span class="line top-bun"></span>
-      <span class="line patty"></span>
-      <span class="line bottom-bun"></span>
-    </button>
-    <nav id="mainNav" class="mobile-nav">
-      <ul>
-        <li>
-          <a href="#" id="aboutLink">About</a>
-          <div id="aboutOverlay" class="overlay-hidden">
-            <button id="backBtn">← Back</button>
-            <ul>
-              <li><a href="ourname.html">Our Name</a></li>
-              <li><a href="whatwedo.html">What We Do</a></li>
-            </ul>
-          </div>
-        </li>
-        <li><a href="ourphilosophy.html">Our Philosophy</a></li>
-        <li><a href="contactus.html" class="cta-button">Contact Us</a></li>
-      </ul>
-    </nav>
-    <div class="header-cta">
-      <a href="contactus.html" class="cta-button">Contact Us</a>
+    
+ <!-- Hamburger for mobile -->
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+      
+      <!-- Mobile Nav -->
+
+    <!-- Name and Close Button at the top -->
+      <nav id="mobileNav" class="mobile-nav">
+        <div class="mobile-nav-header">
+          <div class="mobile-site-title">KETURI INVESTMENT MANAGEMENT</div>
+          <button id="closeNavBtn" aria-label="Close Menu" class="close-btn">×</button>
+        </div>
+
+        <!-- Main Menu -->
+        <ul id="mainMenu" class="mobile-menu">
+          <li><a href="#" id="aboutLink">About > </a></li>
+          <li><a href="ourphilosophy.html">Our Philosophy</a></li>
+          <li><a href="contactus.html" class="cta-button">Contact Us</a></li>
+        </ul>
+      
+        <!-- Submenu for About -->
+        <ul id="aboutSubMenu" class="mobile-menu submenu hidden">
+          <li><button id="backBtn" class="back-btn">← Back</button></li>
+          <li><a href="ourname.html">Our Name</a></li>
+          <li><a href="whatwedo.html">What We Do</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
 </header>
 
   <main>
