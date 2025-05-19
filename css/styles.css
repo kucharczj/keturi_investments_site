@@ -293,6 +293,39 @@ body {
   cursor: pointer;
 }
 
+.mobile-nav-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  background: white;
+  border-bottom: 1px solid #ccc;
+  z-index: 2002;
+}
+
+.mobile-site-title {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #0c3c52;
+}
+
+.close-btn {
+  font-size: 1.8rem;
+  color: #0c3c52;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+
 /* 7) ————————————————————————————— CTA Button ————————————————————————————— */
 .header-cta .cta-button {
   background: #7c95a8;
