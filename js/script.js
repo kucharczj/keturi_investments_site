@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const backBtn = document.getElementById('backBtn');
   const folderDropdown = document.querySelector('.folder-dropdown');
   const navList = document.querySelector('.desktop-nav ul');
+  const closeBtn = document.getElementById('closeNavBtn');
 
   // Hamburger toggle
   if (hamburgerBtn && mobileNav) {
@@ -67,4 +68,15 @@ document.addEventListener('DOMContentLoaded', function () {
       mainMenu.classList.remove('hidden');
     }
   });
+  
+  // Close button on mobile
+  if (closeBtn) {
+  closeBtn.addEventListener('click', function () {
+    mobileNav.classList.remove('open');
+    hamburgerBtn.setAttribute('aria-expanded', false);
+    document.body.classList.remove('no-scroll');
+    mainMenu.classList.remove('hidden');
+    aboutSubMenu.classList.add('hidden');
+  });
+}
 });
