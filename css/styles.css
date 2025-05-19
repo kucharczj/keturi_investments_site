@@ -509,6 +509,24 @@ body {
   text-decoration: underline;
 }
 
+.financial-summary-text {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: 0.15em;
+  color: #2f4f60;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.financial-summary-line {
+  border: none;
+  border-top: 1px solid #2f4f60;
+  width: 60%;
+  margin: 0 auto;
+}
+
 
 /* 11) ————————————————————————————— Footer ————————————————————————————— */
 .site-footer {
