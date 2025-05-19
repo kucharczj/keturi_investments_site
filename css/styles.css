@@ -917,4 +917,8 @@ body.no-scroll {
     color: #0c3c52;
     text-decoration: none;
   }
+
+  .header-cta {
+    display: none;
+  }
 }
