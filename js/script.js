@@ -71,12 +71,12 @@ document.addEventListener('DOMContentLoaded', function () {
   
   // Close button on mobile
   if (closeBtn) {
-  closeBtn.addEventListener('click', function () {
-    mobileNav.classList.remove('open');
-    hamburgerBtn.setAttribute('aria-expanded', false);
-    document.body.classList.remove('no-scroll');
-    mainMenu.classList.remove('hidden');
-    aboutSubMenu.classList.add('hidden');
-  });
-}
+    closeBtn.addEventListener('click', function () {
+      mobileNav.classList.remove('open');
+      hamburgerBtn.setAttribute('aria-expanded', false);
+      document.body.classList.remove('no-scroll');
+      mainMenu.classList.remove('hidden');
+      aboutSubMenu.classList.add('hidden');
+    });
+  }
 });
